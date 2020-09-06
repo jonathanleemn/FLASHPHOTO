@@ -1,0 +1,129 @@
+\hypertarget{classimage__tools_1_1MiaApp}{}\section{image\+\_\+tools\+:\+:Mia\+App Class Reference}
+\label{classimage__tools_1_1MiaApp}\index{image\+\_\+tools\+::\+Mia\+App@{image\+\_\+tools\+::\+Mia\+App}}
+
+
+The Mia G\+UI. This class creates a graphics window to display the current \hyperlink{classimage__tools_1_1PixelBuffer}{Pixel\+Buffer} and a graphical user interface to interact with it using Tools and Filters.  
+
+
+
+
+{\ttfamily \#include $<$mia\+\_\+app.\+h$>$}
+
+
+
+Inheritance diagram for image\+\_\+tools\+:\+:Mia\+App\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=188pt]{classimage__tools_1_1MiaApp__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for image\+\_\+tools\+:\+:Mia\+App\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=188pt]{classimage__tools_1_1MiaApp__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classimage__tools_1_1MiaApp_a615e8559a662c54a9f2487a7d6a55b57}\label{classimage__tools_1_1MiaApp_a615e8559a662c54a9f2487a7d6a55b57}} 
+{\bfseries Mia\+App} (int width, int height, const \hyperlink{classimage__tools_1_1ColorData}{Color\+Data} \&background\+\_\+color)
+\item 
+void \hyperlink{classimage__tools_1_1MiaApp_a2b65628198da98dec676c57af8ff881c}{On\+Mouse\+Move} (const mingfx\+::\+Point2 \&pos, const mingfx\+::\+Vector2 \&delta) override
+\item 
+void \hyperlink{classimage__tools_1_1MiaApp_add49ee649aa2cd4f5a48cbe7ce932011}{On\+Left\+Mouse\+Down} (const mingfx\+::\+Point2 \&pos) override
+\item 
+void \hyperlink{classimage__tools_1_1MiaApp_a0a2f072e2a386bffd3ea9925807d1381}{On\+Left\+Mouse\+Drag} (const mingfx\+::\+Point2 \&pos, const mingfx\+::\+Vector2 \&delta) override
+\item 
+void \hyperlink{classimage__tools_1_1MiaApp_af386887e8245037fed9d615890cee417}{On\+Left\+Mouse\+Up} (const mingfx\+::\+Point2 \&pos) override
+\item 
+void \hyperlink{classimage__tools_1_1MiaApp_a81597364eeca01df8e26cfb6bf037ffe}{On\+Window\+Resize} (int new\+\_\+width, int new\+\_\+height) override
+\item 
+void \hyperlink{classimage__tools_1_1MiaApp_a601e7b8b38ca77b8c6bf81b421fda18b}{Update\+Simulation} (double dt) override
+\item 
+void \hyperlink{classimage__tools_1_1MiaApp_a83654a0b4e70c1b6b16e1b10d9becaad}{Init\+Nano\+G\+UI} () override
+\item 
+void \hyperlink{classimage__tools_1_1MiaApp_ac59579850ed3ebdfcc1885f88238e887}{Init\+Open\+GL} () override
+\item 
+void \hyperlink{classimage__tools_1_1MiaApp_af7498f998abe700b139f8600eb9e882b}{Draw\+Using\+Nano\+VG} (N\+V\+Gcontext $\ast$ctx) override
+\item 
+void \hyperlink{classimage__tools_1_1MiaApp_a0633d685229af3678546abcf1515362f}{Draw\+Using\+Open\+GL} () override
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The Mia G\+UI. This class creates a graphics window to display the current \hyperlink{classimage__tools_1_1PixelBuffer}{Pixel\+Buffer} and a graphical user interface to interact with it using Tools and Filters. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classimage__tools_1_1MiaApp_af7498f998abe700b139f8600eb9e882b}\label{classimage__tools_1_1MiaApp_af7498f998abe700b139f8600eb9e882b}} 
+\index{image\+\_\+tools\+::\+Mia\+App@{image\+\_\+tools\+::\+Mia\+App}!Draw\+Using\+Nano\+VG@{Draw\+Using\+Nano\+VG}}
+\index{Draw\+Using\+Nano\+VG@{Draw\+Using\+Nano\+VG}!image\+\_\+tools\+::\+Mia\+App@{image\+\_\+tools\+::\+Mia\+App}}
+\subsubsection{\texorpdfstring{Draw\+Using\+Nano\+V\+G()}{DrawUsingNanoVG()}}
+{\footnotesize\ttfamily void image\+\_\+tools\+::\+Mia\+App\+::\+Draw\+Using\+Nano\+VG (\begin{DoxyParamCaption}\item[{N\+V\+Gcontext $\ast$}]{ctx }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}}
+
+Used to draw the cursor for the tool once each frame. \mbox{\Hypertarget{classimage__tools_1_1MiaApp_a0633d685229af3678546abcf1515362f}\label{classimage__tools_1_1MiaApp_a0633d685229af3678546abcf1515362f}} 
+\index{image\+\_\+tools\+::\+Mia\+App@{image\+\_\+tools\+::\+Mia\+App}!Draw\+Using\+Open\+GL@{Draw\+Using\+Open\+GL}}
+\index{Draw\+Using\+Open\+GL@{Draw\+Using\+Open\+GL}!image\+\_\+tools\+::\+Mia\+App@{image\+\_\+tools\+::\+Mia\+App}}
+\subsubsection{\texorpdfstring{Draw\+Using\+Open\+G\+L()}{DrawUsingOpenGL()}}
+{\footnotesize\ttfamily void image\+\_\+tools\+::\+Mia\+App\+::\+Draw\+Using\+Open\+GL (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}}
+
+Used to draw the \hyperlink{classimage__tools_1_1PixelBuffer}{Pixel\+Buffer} to the screen once each frame. \mbox{\Hypertarget{classimage__tools_1_1MiaApp_a83654a0b4e70c1b6b16e1b10d9becaad}\label{classimage__tools_1_1MiaApp_a83654a0b4e70c1b6b16e1b10d9becaad}} 
+\index{image\+\_\+tools\+::\+Mia\+App@{image\+\_\+tools\+::\+Mia\+App}!Init\+Nano\+G\+UI@{Init\+Nano\+G\+UI}}
+\index{Init\+Nano\+G\+UI@{Init\+Nano\+G\+UI}!image\+\_\+tools\+::\+Mia\+App@{image\+\_\+tools\+::\+Mia\+App}}
+\subsubsection{\texorpdfstring{Init\+Nano\+G\+U\+I()}{InitNanoGUI()}}
+{\footnotesize\ttfamily void image\+\_\+tools\+::\+Mia\+App\+::\+Init\+Nano\+G\+UI (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}}
+
+Used to setup the 2D G\+UI. \mbox{\Hypertarget{classimage__tools_1_1MiaApp_ac59579850ed3ebdfcc1885f88238e887}\label{classimage__tools_1_1MiaApp_ac59579850ed3ebdfcc1885f88238e887}} 
+\index{image\+\_\+tools\+::\+Mia\+App@{image\+\_\+tools\+::\+Mia\+App}!Init\+Open\+GL@{Init\+Open\+GL}}
+\index{Init\+Open\+GL@{Init\+Open\+GL}!image\+\_\+tools\+::\+Mia\+App@{image\+\_\+tools\+::\+Mia\+App}}
+\subsubsection{\texorpdfstring{Init\+Open\+G\+L()}{InitOpenGL()}}
+{\footnotesize\ttfamily void image\+\_\+tools\+::\+Mia\+App\+::\+Init\+Open\+GL (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}}
+
+Used to initialize Open\+GL graphics, including the texture used to draw the pixel buffer to the screen. \mbox{\Hypertarget{classimage__tools_1_1MiaApp_add49ee649aa2cd4f5a48cbe7ce932011}\label{classimage__tools_1_1MiaApp_add49ee649aa2cd4f5a48cbe7ce932011}} 
+\index{image\+\_\+tools\+::\+Mia\+App@{image\+\_\+tools\+::\+Mia\+App}!On\+Left\+Mouse\+Down@{On\+Left\+Mouse\+Down}}
+\index{On\+Left\+Mouse\+Down@{On\+Left\+Mouse\+Down}!image\+\_\+tools\+::\+Mia\+App@{image\+\_\+tools\+::\+Mia\+App}}
+\subsubsection{\texorpdfstring{On\+Left\+Mouse\+Down()}{OnLeftMouseDown()}}
+{\footnotesize\ttfamily void image\+\_\+tools\+::\+Mia\+App\+::\+On\+Left\+Mouse\+Down (\begin{DoxyParamCaption}\item[{const mingfx\+::\+Point2 \&}]{pos }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}}
+
+Called when the user pushes the mouse left button. \mbox{\Hypertarget{classimage__tools_1_1MiaApp_a0a2f072e2a386bffd3ea9925807d1381}\label{classimage__tools_1_1MiaApp_a0a2f072e2a386bffd3ea9925807d1381}} 
+\index{image\+\_\+tools\+::\+Mia\+App@{image\+\_\+tools\+::\+Mia\+App}!On\+Left\+Mouse\+Drag@{On\+Left\+Mouse\+Drag}}
+\index{On\+Left\+Mouse\+Drag@{On\+Left\+Mouse\+Drag}!image\+\_\+tools\+::\+Mia\+App@{image\+\_\+tools\+::\+Mia\+App}}
+\subsubsection{\texorpdfstring{On\+Left\+Mouse\+Drag()}{OnLeftMouseDrag()}}
+{\footnotesize\ttfamily void image\+\_\+tools\+::\+Mia\+App\+::\+On\+Left\+Mouse\+Drag (\begin{DoxyParamCaption}\item[{const mingfx\+::\+Point2 \&}]{pos,  }\item[{const mingfx\+::\+Vector2 \&}]{delta }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}}
+
+Called when the user moves the mouse with the left button depressed. \mbox{\Hypertarget{classimage__tools_1_1MiaApp_af386887e8245037fed9d615890cee417}\label{classimage__tools_1_1MiaApp_af386887e8245037fed9d615890cee417}} 
+\index{image\+\_\+tools\+::\+Mia\+App@{image\+\_\+tools\+::\+Mia\+App}!On\+Left\+Mouse\+Up@{On\+Left\+Mouse\+Up}}
+\index{On\+Left\+Mouse\+Up@{On\+Left\+Mouse\+Up}!image\+\_\+tools\+::\+Mia\+App@{image\+\_\+tools\+::\+Mia\+App}}
+\subsubsection{\texorpdfstring{On\+Left\+Mouse\+Up()}{OnLeftMouseUp()}}
+{\footnotesize\ttfamily void image\+\_\+tools\+::\+Mia\+App\+::\+On\+Left\+Mouse\+Up (\begin{DoxyParamCaption}\item[{const mingfx\+::\+Point2 \&}]{pos }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}}
+
+Called when the user releases the left mouse button. \mbox{\Hypertarget{classimage__tools_1_1MiaApp_a2b65628198da98dec676c57af8ff881c}\label{classimage__tools_1_1MiaApp_a2b65628198da98dec676c57af8ff881c}} 
+\index{image\+\_\+tools\+::\+Mia\+App@{image\+\_\+tools\+::\+Mia\+App}!On\+Mouse\+Move@{On\+Mouse\+Move}}
+\index{On\+Mouse\+Move@{On\+Mouse\+Move}!image\+\_\+tools\+::\+Mia\+App@{image\+\_\+tools\+::\+Mia\+App}}
+\subsubsection{\texorpdfstring{On\+Mouse\+Move()}{OnMouseMove()}}
+{\footnotesize\ttfamily void image\+\_\+tools\+::\+Mia\+App\+::\+On\+Mouse\+Move (\begin{DoxyParamCaption}\item[{const mingfx\+::\+Point2 \&}]{pos,  }\item[{const mingfx\+::\+Vector2 \&}]{delta }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}}
+
+Called when the mouse moves but no mouse buttons are currently pressed. \mbox{\Hypertarget{classimage__tools_1_1MiaApp_a81597364eeca01df8e26cfb6bf037ffe}\label{classimage__tools_1_1MiaApp_a81597364eeca01df8e26cfb6bf037ffe}} 
+\index{image\+\_\+tools\+::\+Mia\+App@{image\+\_\+tools\+::\+Mia\+App}!On\+Window\+Resize@{On\+Window\+Resize}}
+\index{On\+Window\+Resize@{On\+Window\+Resize}!image\+\_\+tools\+::\+Mia\+App@{image\+\_\+tools\+::\+Mia\+App}}
+\subsubsection{\texorpdfstring{On\+Window\+Resize()}{OnWindowResize()}}
+{\footnotesize\ttfamily void image\+\_\+tools\+::\+Mia\+App\+::\+On\+Window\+Resize (\begin{DoxyParamCaption}\item[{int}]{new\+\_\+width,  }\item[{int}]{new\+\_\+height }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}}
+
+This function is called when the user drags the corner of the window to resize it. We need to detect that operation because it requires us to resize the underlying pixel buffer. \mbox{\Hypertarget{classimage__tools_1_1MiaApp_a601e7b8b38ca77b8c6bf81b421fda18b}\label{classimage__tools_1_1MiaApp_a601e7b8b38ca77b8c6bf81b421fda18b}} 
+\index{image\+\_\+tools\+::\+Mia\+App@{image\+\_\+tools\+::\+Mia\+App}!Update\+Simulation@{Update\+Simulation}}
+\index{Update\+Simulation@{Update\+Simulation}!image\+\_\+tools\+::\+Mia\+App@{image\+\_\+tools\+::\+Mia\+App}}
+\subsubsection{\texorpdfstring{Update\+Simulation()}{UpdateSimulation()}}
+{\footnotesize\ttfamily void image\+\_\+tools\+::\+Mia\+App\+::\+Update\+Simulation (\begin{DoxyParamCaption}\item[{double}]{dt }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}}
+
+This function gets called once per frame. If the user is in the middle of using a tool that applies more \char`\"{}paint\char`\"{} over time, like a spray can, then this function is used to repeatedly apply the tool to the pixel buffer. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/mia/mia\+\_\+app.\+h\item 
+src/mia/mia\+\_\+app.\+cc\end{DoxyCompactItemize}

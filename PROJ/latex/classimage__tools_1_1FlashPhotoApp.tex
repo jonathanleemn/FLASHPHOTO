@@ -1,0 +1,283 @@
+\hypertarget{classimage__tools_1_1FlashPhotoApp}{}\section{image\+\_\+tools\+:\+:Flash\+Photo\+App Class Reference}
+\label{classimage__tools_1_1FlashPhotoApp}\index{image\+\_\+tools\+::\+Flash\+Photo\+App@{image\+\_\+tools\+::\+Flash\+Photo\+App}}
+
+
+The Flash\+Photo G\+UI. This class creates a graphics window to display the current \hyperlink{classimage__tools_1_1PixelBuffer}{Pixel\+Buffer} and a graphical user interface to interact with it using Tools and Filters.  
+
+
+
+
+{\ttfamily \#include $<$flashphoto\+\_\+app.\+h$>$}
+
+
+
+Inheritance diagram for image\+\_\+tools\+:\+:Flash\+Photo\+App\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=222pt]{classimage__tools_1_1FlashPhotoApp__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for image\+\_\+tools\+:\+:Flash\+Photo\+App\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=222pt]{classimage__tools_1_1FlashPhotoApp__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classimage__tools_1_1FlashPhotoApp_ae5fac55fc6210eb08bde89343170bfe0}\label{classimage__tools_1_1FlashPhotoApp_ae5fac55fc6210eb08bde89343170bfe0}} 
+{\bfseries Flash\+Photo\+App} (int width, int height, const \hyperlink{classimage__tools_1_1ColorData}{Color\+Data} \&background\+\_\+color)
+\item 
+void \hyperlink{classimage__tools_1_1FlashPhotoApp_aba314de10932cab1acbf34debbbb9776}{On\+Mouse\+Move} (const mingfx\+::\+Point2 \&pos, const mingfx\+::\+Vector2 \&delta) override
+\item 
+void \hyperlink{classimage__tools_1_1FlashPhotoApp_af26aeb5420b9f123fba9330abc3ff907}{On\+Left\+Mouse\+Down} (const mingfx\+::\+Point2 \&pos) override
+\item 
+void \hyperlink{classimage__tools_1_1FlashPhotoApp_a900752c3758c9a92619a24b7c3e351e8}{On\+Left\+Mouse\+Drag} (const mingfx\+::\+Point2 \&pos, const mingfx\+::\+Vector2 \&delta) override
+\item 
+void \hyperlink{classimage__tools_1_1FlashPhotoApp_a63ce75bf69e79b7db32f07f0cd9c50b7}{On\+Left\+Mouse\+Up} (const mingfx\+::\+Point2 \&pos) override
+\item 
+void \hyperlink{classimage__tools_1_1FlashPhotoApp_afab3ded368aee035c7c229226048479a}{On\+Window\+Resize} (int new\+\_\+width, int new\+\_\+height) override
+\item 
+void \hyperlink{classimage__tools_1_1FlashPhotoApp_af69350137d0f9f7501853d23a72c7f4e}{Update\+Simulation} (double dt) override
+\item 
+void \hyperlink{classimage__tools_1_1FlashPhotoApp_a58a876833577928a4a361e9b14a03680}{Init\+Nano\+G\+UI} () override
+\item 
+void \hyperlink{classimage__tools_1_1FlashPhotoApp_a8824007bb6ed253f1b5a37d458ff2371}{Init\+Open\+GL} () override
+\item 
+void \hyperlink{classimage__tools_1_1FlashPhotoApp_abda3c07c67a29eba47e341bdf0223e7a}{Draw\+Using\+Nano\+VG} (N\+V\+Gcontext $\ast$ctx) override
+\item 
+void \hyperlink{classimage__tools_1_1FlashPhotoApp_a58e520556daa81224cb0a76a3fca9b78}{Draw\+Using\+Open\+GL} () override
+\item 
+void \hyperlink{classimage__tools_1_1FlashPhotoApp_aee942a00db0ff47ed36f4a78bf308482}{Load\+From\+File} (const std\+::string \&filename)
+\item 
+void \hyperlink{classimage__tools_1_1FlashPhotoApp_a292e1e58a4848cbf055def1ad0acd79a}{Save\+To\+File} (const std\+::string \&filename)
+\item 
+\mbox{\Hypertarget{classimage__tools_1_1FlashPhotoApp_a4e9f1d7e08fbb87ad67027c4021066c8}\label{classimage__tools_1_1FlashPhotoApp_a4e9f1d7e08fbb87ad67027c4021066c8}} 
+\hyperlink{classimage__tools_1_1Tool}{Tool} $\ast$ {\bfseries Get\+Tool\+By\+Name} (const std\+::string \&name)
+\item 
+void \hyperlink{classimage__tools_1_1FlashPhotoApp_ab40b6ecc2ba4caa35b8e18f091b67253}{Start\+Stroke} (const std\+::string \&tool\+\_\+name, const \hyperlink{classimage__tools_1_1ColorData}{Color\+Data} \&color, float radius, int x, int y)
+\item 
+void \hyperlink{classimage__tools_1_1FlashPhotoApp_a1ede0fe70602cbe2d50a3123eda8a937}{Add\+To\+Stroke} (int x, int y)
+\item 
+void \hyperlink{classimage__tools_1_1FlashPhotoApp_a34682088e7957ea5e5adf084d2a292a8}{End\+Stroke} (int x, int y)
+\item 
+void \hyperlink{classimage__tools_1_1FlashPhotoApp_ab9de628d295f2ce1ea869767cb918a2d}{Apply\+Blur\+Filter} (float radius)
+\begin{DoxyCompactList}\small\item\em Four possible motion blur directions are supported. \end{DoxyCompactList}\item 
+void \hyperlink{classimage__tools_1_1FlashPhotoApp_aa09e633c5a2e34bf1ccf2259012011ba}{Apply\+Motion\+Blur\+Filter} (float radius, \hyperlink{classimage__tools_1_1ImageEditor_a20bacf2756f1b97eed82d2fee9628ac2}{Image\+Editor\+::\+M\+Blur\+Dir} dir)
+\item 
+void \hyperlink{classimage__tools_1_1FlashPhotoApp_a417e86946b777c42db91eab906d26354}{Apply\+Sharpen\+Filter} (float radius)
+\item 
+void \hyperlink{classimage__tools_1_1FlashPhotoApp_ae58e5cfde20b6834ac92310f2a267658}{Apply\+Edge\+Detect\+Filter} ()
+\item 
+void \hyperlink{classimage__tools_1_1FlashPhotoApp_aa24ef843ca6afb25886ef687d5e6c525}{Apply\+Threshold\+Filter} (float cutoff\+\_\+value)
+\item 
+void \hyperlink{classimage__tools_1_1FlashPhotoApp_ae9be418a3b05fe8bf16dacc95708fb28}{Apply\+Saturate\+Filter} (float scale\+\_\+factor)
+\item 
+void \hyperlink{classimage__tools_1_1FlashPhotoApp_a4560186e719150bcecc0b665a48bb1d2}{Apply\+Channels\+Filter} (float red\+\_\+scale, float green\+\_\+scale, float blue\+\_\+scale)
+\item 
+void \hyperlink{classimage__tools_1_1FlashPhotoApp_a960f826e98d590b80c4619916a945303}{Apply\+Quantize\+Filter} (int num\+\_\+bins)
+\item 
+void \hyperlink{classimage__tools_1_1FlashPhotoApp_a03106fe64664faa7eedab93bd91b6b11}{Undo} ()
+\item 
+void \hyperlink{classimage__tools_1_1FlashPhotoApp_ae5c00d6fcdd2ec8a7979104793273c0a}{Redo} ()
+\item 
+bool \hyperlink{classimage__tools_1_1FlashPhotoApp_a2699fa48bf3912260480ec4f966af03c}{can\+\_\+undo} ()
+\item 
+bool \hyperlink{classimage__tools_1_1FlashPhotoApp_aa7fa6acb2590551d56f0130d94814b95}{can\+\_\+redo} ()
+\item 
+\mbox{\Hypertarget{classimage__tools_1_1FlashPhotoApp_a5c14458e3dc792193829b0265574927a}\label{classimage__tools_1_1FlashPhotoApp_a5c14458e3dc792193829b0265574927a}} 
+\hyperlink{classimage__tools_1_1PixelBuffer}{Pixel\+Buffer} $\ast$ {\bfseries pixel\+\_\+buffer} ()
+\item 
+\mbox{\Hypertarget{classimage__tools_1_1FlashPhotoApp_abc982c3bad021cf9f4ff7a726dc98046}\label{classimage__tools_1_1FlashPhotoApp_abc982c3bad021cf9f4ff7a726dc98046}} 
+void {\bfseries set\+\_\+pixel\+\_\+buffer} (\hyperlink{classimage__tools_1_1PixelBuffer}{Pixel\+Buffer} $\ast$buffer)
+\item 
+\mbox{\Hypertarget{classimage__tools_1_1FlashPhotoApp_a6b757e107ece48fa4f92fef9830b049f}\label{classimage__tools_1_1FlashPhotoApp_a6b757e107ece48fa4f92fef9830b049f}} 
+void {\bfseries Public\+Save\+State\+For\+Possible\+Undo} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The Flash\+Photo G\+UI. This class creates a graphics window to display the current \hyperlink{classimage__tools_1_1PixelBuffer}{Pixel\+Buffer} and a graphical user interface to interact with it using Tools and Filters. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classimage__tools_1_1FlashPhotoApp_a1ede0fe70602cbe2d50a3123eda8a937}\label{classimage__tools_1_1FlashPhotoApp_a1ede0fe70602cbe2d50a3123eda8a937}} 
+\index{image\+\_\+tools\+::\+Flash\+Photo\+App@{image\+\_\+tools\+::\+Flash\+Photo\+App}!Add\+To\+Stroke@{Add\+To\+Stroke}}
+\index{Add\+To\+Stroke@{Add\+To\+Stroke}!image\+\_\+tools\+::\+Flash\+Photo\+App@{image\+\_\+tools\+::\+Flash\+Photo\+App}}
+\subsubsection{\texorpdfstring{Add\+To\+Stroke()}{AddToStroke()}}
+{\footnotesize\ttfamily void image\+\_\+tools\+::\+Flash\+Photo\+App\+::\+Add\+To\+Stroke (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{y }\end{DoxyParamCaption})}
+
+Call this from the controller to add to a stroke that was recently started with a call to \hyperlink{classimage__tools_1_1FlashPhotoApp_ab40b6ecc2ba4caa35b8e18f091b67253}{Start\+Stroke()}. \mbox{\Hypertarget{classimage__tools_1_1FlashPhotoApp_ab9de628d295f2ce1ea869767cb918a2d}\label{classimage__tools_1_1FlashPhotoApp_ab9de628d295f2ce1ea869767cb918a2d}} 
+\index{image\+\_\+tools\+::\+Flash\+Photo\+App@{image\+\_\+tools\+::\+Flash\+Photo\+App}!Apply\+Blur\+Filter@{Apply\+Blur\+Filter}}
+\index{Apply\+Blur\+Filter@{Apply\+Blur\+Filter}!image\+\_\+tools\+::\+Flash\+Photo\+App@{image\+\_\+tools\+::\+Flash\+Photo\+App}}
+\subsubsection{\texorpdfstring{Apply\+Blur\+Filter()}{ApplyBlurFilter()}}
+{\footnotesize\ttfamily void image\+\_\+tools\+::\+Flash\+Photo\+App\+::\+Apply\+Blur\+Filter (\begin{DoxyParamCaption}\item[{float}]{radius }\end{DoxyParamCaption})}
+
+
+
+Four possible motion blur directions are supported. 
+
+Call this from the controller to apply the blur filter to the current pixel buffer using the current blur filter state. \mbox{\Hypertarget{classimage__tools_1_1FlashPhotoApp_a4560186e719150bcecc0b665a48bb1d2}\label{classimage__tools_1_1FlashPhotoApp_a4560186e719150bcecc0b665a48bb1d2}} 
+\index{image\+\_\+tools\+::\+Flash\+Photo\+App@{image\+\_\+tools\+::\+Flash\+Photo\+App}!Apply\+Channels\+Filter@{Apply\+Channels\+Filter}}
+\index{Apply\+Channels\+Filter@{Apply\+Channels\+Filter}!image\+\_\+tools\+::\+Flash\+Photo\+App@{image\+\_\+tools\+::\+Flash\+Photo\+App}}
+\subsubsection{\texorpdfstring{Apply\+Channels\+Filter()}{ApplyChannelsFilter()}}
+{\footnotesize\ttfamily void image\+\_\+tools\+::\+Flash\+Photo\+App\+::\+Apply\+Channels\+Filter (\begin{DoxyParamCaption}\item[{float}]{red\+\_\+scale,  }\item[{float}]{green\+\_\+scale,  }\item[{float}]{blue\+\_\+scale }\end{DoxyParamCaption})}
+
+Call this from the controller to apply the channels filter to the current pixel buffer using the current channels filter state. \mbox{\Hypertarget{classimage__tools_1_1FlashPhotoApp_ae58e5cfde20b6834ac92310f2a267658}\label{classimage__tools_1_1FlashPhotoApp_ae58e5cfde20b6834ac92310f2a267658}} 
+\index{image\+\_\+tools\+::\+Flash\+Photo\+App@{image\+\_\+tools\+::\+Flash\+Photo\+App}!Apply\+Edge\+Detect\+Filter@{Apply\+Edge\+Detect\+Filter}}
+\index{Apply\+Edge\+Detect\+Filter@{Apply\+Edge\+Detect\+Filter}!image\+\_\+tools\+::\+Flash\+Photo\+App@{image\+\_\+tools\+::\+Flash\+Photo\+App}}
+\subsubsection{\texorpdfstring{Apply\+Edge\+Detect\+Filter()}{ApplyEdgeDetectFilter()}}
+{\footnotesize\ttfamily void image\+\_\+tools\+::\+Flash\+Photo\+App\+::\+Apply\+Edge\+Detect\+Filter (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Call this from the controller to apply the edge detect filter to the current pixel buffer using the current edge detect filter state. \mbox{\Hypertarget{classimage__tools_1_1FlashPhotoApp_aa09e633c5a2e34bf1ccf2259012011ba}\label{classimage__tools_1_1FlashPhotoApp_aa09e633c5a2e34bf1ccf2259012011ba}} 
+\index{image\+\_\+tools\+::\+Flash\+Photo\+App@{image\+\_\+tools\+::\+Flash\+Photo\+App}!Apply\+Motion\+Blur\+Filter@{Apply\+Motion\+Blur\+Filter}}
+\index{Apply\+Motion\+Blur\+Filter@{Apply\+Motion\+Blur\+Filter}!image\+\_\+tools\+::\+Flash\+Photo\+App@{image\+\_\+tools\+::\+Flash\+Photo\+App}}
+\subsubsection{\texorpdfstring{Apply\+Motion\+Blur\+Filter()}{ApplyMotionBlurFilter()}}
+{\footnotesize\ttfamily void image\+\_\+tools\+::\+Flash\+Photo\+App\+::\+Apply\+Motion\+Blur\+Filter (\begin{DoxyParamCaption}\item[{float}]{radius,  }\item[{\hyperlink{classimage__tools_1_1ImageEditor_a20bacf2756f1b97eed82d2fee9628ac2}{Image\+Editor\+::\+M\+Blur\+Dir}}]{dir }\end{DoxyParamCaption})}
+
+Call this from the controller to apply the filter to the current
+
+pixel buffer using the current motion blur filter state. \mbox{\Hypertarget{classimage__tools_1_1FlashPhotoApp_a960f826e98d590b80c4619916a945303}\label{classimage__tools_1_1FlashPhotoApp_a960f826e98d590b80c4619916a945303}} 
+\index{image\+\_\+tools\+::\+Flash\+Photo\+App@{image\+\_\+tools\+::\+Flash\+Photo\+App}!Apply\+Quantize\+Filter@{Apply\+Quantize\+Filter}}
+\index{Apply\+Quantize\+Filter@{Apply\+Quantize\+Filter}!image\+\_\+tools\+::\+Flash\+Photo\+App@{image\+\_\+tools\+::\+Flash\+Photo\+App}}
+\subsubsection{\texorpdfstring{Apply\+Quantize\+Filter()}{ApplyQuantizeFilter()}}
+{\footnotesize\ttfamily void image\+\_\+tools\+::\+Flash\+Photo\+App\+::\+Apply\+Quantize\+Filter (\begin{DoxyParamCaption}\item[{int}]{num\+\_\+bins }\end{DoxyParamCaption})}
+
+Call this from the controller to apply the quantize filter to the current pixel buffer using the current quantize filter state. \mbox{\Hypertarget{classimage__tools_1_1FlashPhotoApp_ae9be418a3b05fe8bf16dacc95708fb28}\label{classimage__tools_1_1FlashPhotoApp_ae9be418a3b05fe8bf16dacc95708fb28}} 
+\index{image\+\_\+tools\+::\+Flash\+Photo\+App@{image\+\_\+tools\+::\+Flash\+Photo\+App}!Apply\+Saturate\+Filter@{Apply\+Saturate\+Filter}}
+\index{Apply\+Saturate\+Filter@{Apply\+Saturate\+Filter}!image\+\_\+tools\+::\+Flash\+Photo\+App@{image\+\_\+tools\+::\+Flash\+Photo\+App}}
+\subsubsection{\texorpdfstring{Apply\+Saturate\+Filter()}{ApplySaturateFilter()}}
+{\footnotesize\ttfamily void image\+\_\+tools\+::\+Flash\+Photo\+App\+::\+Apply\+Saturate\+Filter (\begin{DoxyParamCaption}\item[{float}]{scale\+\_\+factor }\end{DoxyParamCaption})}
+
+Call this from the controller to apply the saturate filter to the current pixel buffer using the current saturate filter state. \mbox{\Hypertarget{classimage__tools_1_1FlashPhotoApp_a417e86946b777c42db91eab906d26354}\label{classimage__tools_1_1FlashPhotoApp_a417e86946b777c42db91eab906d26354}} 
+\index{image\+\_\+tools\+::\+Flash\+Photo\+App@{image\+\_\+tools\+::\+Flash\+Photo\+App}!Apply\+Sharpen\+Filter@{Apply\+Sharpen\+Filter}}
+\index{Apply\+Sharpen\+Filter@{Apply\+Sharpen\+Filter}!image\+\_\+tools\+::\+Flash\+Photo\+App@{image\+\_\+tools\+::\+Flash\+Photo\+App}}
+\subsubsection{\texorpdfstring{Apply\+Sharpen\+Filter()}{ApplySharpenFilter()}}
+{\footnotesize\ttfamily void image\+\_\+tools\+::\+Flash\+Photo\+App\+::\+Apply\+Sharpen\+Filter (\begin{DoxyParamCaption}\item[{float}]{radius }\end{DoxyParamCaption})}
+
+Call this from the controller to apply the sharpen filter to the current pixel buffer using the current sharpen filter state. \mbox{\Hypertarget{classimage__tools_1_1FlashPhotoApp_aa24ef843ca6afb25886ef687d5e6c525}\label{classimage__tools_1_1FlashPhotoApp_aa24ef843ca6afb25886ef687d5e6c525}} 
+\index{image\+\_\+tools\+::\+Flash\+Photo\+App@{image\+\_\+tools\+::\+Flash\+Photo\+App}!Apply\+Threshold\+Filter@{Apply\+Threshold\+Filter}}
+\index{Apply\+Threshold\+Filter@{Apply\+Threshold\+Filter}!image\+\_\+tools\+::\+Flash\+Photo\+App@{image\+\_\+tools\+::\+Flash\+Photo\+App}}
+\subsubsection{\texorpdfstring{Apply\+Threshold\+Filter()}{ApplyThresholdFilter()}}
+{\footnotesize\ttfamily void image\+\_\+tools\+::\+Flash\+Photo\+App\+::\+Apply\+Threshold\+Filter (\begin{DoxyParamCaption}\item[{float}]{cutoff\+\_\+value }\end{DoxyParamCaption})}
+
+Call this from the controller to apply the threshold filter to the current pixel buffer using the current threshold filter state. \mbox{\Hypertarget{classimage__tools_1_1FlashPhotoApp_aa7fa6acb2590551d56f0130d94814b95}\label{classimage__tools_1_1FlashPhotoApp_aa7fa6acb2590551d56f0130d94814b95}} 
+\index{image\+\_\+tools\+::\+Flash\+Photo\+App@{image\+\_\+tools\+::\+Flash\+Photo\+App}!can\+\_\+redo@{can\+\_\+redo}}
+\index{can\+\_\+redo@{can\+\_\+redo}!image\+\_\+tools\+::\+Flash\+Photo\+App@{image\+\_\+tools\+::\+Flash\+Photo\+App}}
+\subsubsection{\texorpdfstring{can\+\_\+redo()}{can\_redo()}}
+{\footnotesize\ttfamily bool image\+\_\+tools\+::\+Flash\+Photo\+App\+::can\+\_\+redo (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+True if the log of undone commands is not empty, i.\+e., it is possible to perform a redo operation. \mbox{\Hypertarget{classimage__tools_1_1FlashPhotoApp_a2699fa48bf3912260480ec4f966af03c}\label{classimage__tools_1_1FlashPhotoApp_a2699fa48bf3912260480ec4f966af03c}} 
+\index{image\+\_\+tools\+::\+Flash\+Photo\+App@{image\+\_\+tools\+::\+Flash\+Photo\+App}!can\+\_\+undo@{can\+\_\+undo}}
+\index{can\+\_\+undo@{can\+\_\+undo}!image\+\_\+tools\+::\+Flash\+Photo\+App@{image\+\_\+tools\+::\+Flash\+Photo\+App}}
+\subsubsection{\texorpdfstring{can\+\_\+undo()}{can\_undo()}}
+{\footnotesize\ttfamily bool image\+\_\+tools\+::\+Flash\+Photo\+App\+::can\+\_\+undo (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+True if the the log of applied commands is not empty, i.\+e., it is possible to perform an undo operation. \mbox{\Hypertarget{classimage__tools_1_1FlashPhotoApp_abda3c07c67a29eba47e341bdf0223e7a}\label{classimage__tools_1_1FlashPhotoApp_abda3c07c67a29eba47e341bdf0223e7a}} 
+\index{image\+\_\+tools\+::\+Flash\+Photo\+App@{image\+\_\+tools\+::\+Flash\+Photo\+App}!Draw\+Using\+Nano\+VG@{Draw\+Using\+Nano\+VG}}
+\index{Draw\+Using\+Nano\+VG@{Draw\+Using\+Nano\+VG}!image\+\_\+tools\+::\+Flash\+Photo\+App@{image\+\_\+tools\+::\+Flash\+Photo\+App}}
+\subsubsection{\texorpdfstring{Draw\+Using\+Nano\+V\+G()}{DrawUsingNanoVG()}}
+{\footnotesize\ttfamily void image\+\_\+tools\+::\+Flash\+Photo\+App\+::\+Draw\+Using\+Nano\+VG (\begin{DoxyParamCaption}\item[{N\+V\+Gcontext $\ast$}]{ctx }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}}
+
+Used to draw the cursor for the tool once each frame. \mbox{\Hypertarget{classimage__tools_1_1FlashPhotoApp_a58e520556daa81224cb0a76a3fca9b78}\label{classimage__tools_1_1FlashPhotoApp_a58e520556daa81224cb0a76a3fca9b78}} 
+\index{image\+\_\+tools\+::\+Flash\+Photo\+App@{image\+\_\+tools\+::\+Flash\+Photo\+App}!Draw\+Using\+Open\+GL@{Draw\+Using\+Open\+GL}}
+\index{Draw\+Using\+Open\+GL@{Draw\+Using\+Open\+GL}!image\+\_\+tools\+::\+Flash\+Photo\+App@{image\+\_\+tools\+::\+Flash\+Photo\+App}}
+\subsubsection{\texorpdfstring{Draw\+Using\+Open\+G\+L()}{DrawUsingOpenGL()}}
+{\footnotesize\ttfamily void image\+\_\+tools\+::\+Flash\+Photo\+App\+::\+Draw\+Using\+Open\+GL (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}}
+
+Used to draw the \hyperlink{classimage__tools_1_1PixelBuffer}{Pixel\+Buffer} to the screen once each frame. \mbox{\Hypertarget{classimage__tools_1_1FlashPhotoApp_a34682088e7957ea5e5adf084d2a292a8}\label{classimage__tools_1_1FlashPhotoApp_a34682088e7957ea5e5adf084d2a292a8}} 
+\index{image\+\_\+tools\+::\+Flash\+Photo\+App@{image\+\_\+tools\+::\+Flash\+Photo\+App}!End\+Stroke@{End\+Stroke}}
+\index{End\+Stroke@{End\+Stroke}!image\+\_\+tools\+::\+Flash\+Photo\+App@{image\+\_\+tools\+::\+Flash\+Photo\+App}}
+\subsubsection{\texorpdfstring{End\+Stroke()}{EndStroke()}}
+{\footnotesize\ttfamily void image\+\_\+tools\+::\+Flash\+Photo\+App\+::\+End\+Stroke (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{y }\end{DoxyParamCaption})}
+
+Call this from the controller to end a stroke started with \hyperlink{classimage__tools_1_1FlashPhotoApp_ab40b6ecc2ba4caa35b8e18f091b67253}{Start\+Stroke()}. \mbox{\Hypertarget{classimage__tools_1_1FlashPhotoApp_a58a876833577928a4a361e9b14a03680}\label{classimage__tools_1_1FlashPhotoApp_a58a876833577928a4a361e9b14a03680}} 
+\index{image\+\_\+tools\+::\+Flash\+Photo\+App@{image\+\_\+tools\+::\+Flash\+Photo\+App}!Init\+Nano\+G\+UI@{Init\+Nano\+G\+UI}}
+\index{Init\+Nano\+G\+UI@{Init\+Nano\+G\+UI}!image\+\_\+tools\+::\+Flash\+Photo\+App@{image\+\_\+tools\+::\+Flash\+Photo\+App}}
+\subsubsection{\texorpdfstring{Init\+Nano\+G\+U\+I()}{InitNanoGUI()}}
+{\footnotesize\ttfamily void image\+\_\+tools\+::\+Flash\+Photo\+App\+::\+Init\+Nano\+G\+UI (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}}
+
+Used to setup the 2D G\+UI. \mbox{\Hypertarget{classimage__tools_1_1FlashPhotoApp_a8824007bb6ed253f1b5a37d458ff2371}\label{classimage__tools_1_1FlashPhotoApp_a8824007bb6ed253f1b5a37d458ff2371}} 
+\index{image\+\_\+tools\+::\+Flash\+Photo\+App@{image\+\_\+tools\+::\+Flash\+Photo\+App}!Init\+Open\+GL@{Init\+Open\+GL}}
+\index{Init\+Open\+GL@{Init\+Open\+GL}!image\+\_\+tools\+::\+Flash\+Photo\+App@{image\+\_\+tools\+::\+Flash\+Photo\+App}}
+\subsubsection{\texorpdfstring{Init\+Open\+G\+L()}{InitOpenGL()}}
+{\footnotesize\ttfamily void image\+\_\+tools\+::\+Flash\+Photo\+App\+::\+Init\+Open\+GL (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}}
+
+Used to initialize Open\+GL graphics, including the texture used to draw the pixel buffer to the screen. \mbox{\Hypertarget{classimage__tools_1_1FlashPhotoApp_aee942a00db0ff47ed36f4a78bf308482}\label{classimage__tools_1_1FlashPhotoApp_aee942a00db0ff47ed36f4a78bf308482}} 
+\index{image\+\_\+tools\+::\+Flash\+Photo\+App@{image\+\_\+tools\+::\+Flash\+Photo\+App}!Load\+From\+File@{Load\+From\+File}}
+\index{Load\+From\+File@{Load\+From\+File}!image\+\_\+tools\+::\+Flash\+Photo\+App@{image\+\_\+tools\+::\+Flash\+Photo\+App}}
+\subsubsection{\texorpdfstring{Load\+From\+File()}{LoadFromFile()}}
+{\footnotesize\ttfamily void image\+\_\+tools\+::\+Flash\+Photo\+App\+::\+Load\+From\+File (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{filename }\end{DoxyParamCaption})}
+
+Loads a pixel buffer from a P\+NG formatted file. \mbox{\Hypertarget{classimage__tools_1_1FlashPhotoApp_af26aeb5420b9f123fba9330abc3ff907}\label{classimage__tools_1_1FlashPhotoApp_af26aeb5420b9f123fba9330abc3ff907}} 
+\index{image\+\_\+tools\+::\+Flash\+Photo\+App@{image\+\_\+tools\+::\+Flash\+Photo\+App}!On\+Left\+Mouse\+Down@{On\+Left\+Mouse\+Down}}
+\index{On\+Left\+Mouse\+Down@{On\+Left\+Mouse\+Down}!image\+\_\+tools\+::\+Flash\+Photo\+App@{image\+\_\+tools\+::\+Flash\+Photo\+App}}
+\subsubsection{\texorpdfstring{On\+Left\+Mouse\+Down()}{OnLeftMouseDown()}}
+{\footnotesize\ttfamily void image\+\_\+tools\+::\+Flash\+Photo\+App\+::\+On\+Left\+Mouse\+Down (\begin{DoxyParamCaption}\item[{const mingfx\+::\+Point2 \&}]{pos }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}}
+
+Called when the user pushes the mouse left button. \mbox{\Hypertarget{classimage__tools_1_1FlashPhotoApp_a900752c3758c9a92619a24b7c3e351e8}\label{classimage__tools_1_1FlashPhotoApp_a900752c3758c9a92619a24b7c3e351e8}} 
+\index{image\+\_\+tools\+::\+Flash\+Photo\+App@{image\+\_\+tools\+::\+Flash\+Photo\+App}!On\+Left\+Mouse\+Drag@{On\+Left\+Mouse\+Drag}}
+\index{On\+Left\+Mouse\+Drag@{On\+Left\+Mouse\+Drag}!image\+\_\+tools\+::\+Flash\+Photo\+App@{image\+\_\+tools\+::\+Flash\+Photo\+App}}
+\subsubsection{\texorpdfstring{On\+Left\+Mouse\+Drag()}{OnLeftMouseDrag()}}
+{\footnotesize\ttfamily void image\+\_\+tools\+::\+Flash\+Photo\+App\+::\+On\+Left\+Mouse\+Drag (\begin{DoxyParamCaption}\item[{const mingfx\+::\+Point2 \&}]{pos,  }\item[{const mingfx\+::\+Vector2 \&}]{delta }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}}
+
+Called when the user moves the mouse with the left button depressed. \mbox{\Hypertarget{classimage__tools_1_1FlashPhotoApp_a63ce75bf69e79b7db32f07f0cd9c50b7}\label{classimage__tools_1_1FlashPhotoApp_a63ce75bf69e79b7db32f07f0cd9c50b7}} 
+\index{image\+\_\+tools\+::\+Flash\+Photo\+App@{image\+\_\+tools\+::\+Flash\+Photo\+App}!On\+Left\+Mouse\+Up@{On\+Left\+Mouse\+Up}}
+\index{On\+Left\+Mouse\+Up@{On\+Left\+Mouse\+Up}!image\+\_\+tools\+::\+Flash\+Photo\+App@{image\+\_\+tools\+::\+Flash\+Photo\+App}}
+\subsubsection{\texorpdfstring{On\+Left\+Mouse\+Up()}{OnLeftMouseUp()}}
+{\footnotesize\ttfamily void image\+\_\+tools\+::\+Flash\+Photo\+App\+::\+On\+Left\+Mouse\+Up (\begin{DoxyParamCaption}\item[{const mingfx\+::\+Point2 \&}]{pos }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}}
+
+Called when the user releases the left mouse button. \mbox{\Hypertarget{classimage__tools_1_1FlashPhotoApp_aba314de10932cab1acbf34debbbb9776}\label{classimage__tools_1_1FlashPhotoApp_aba314de10932cab1acbf34debbbb9776}} 
+\index{image\+\_\+tools\+::\+Flash\+Photo\+App@{image\+\_\+tools\+::\+Flash\+Photo\+App}!On\+Mouse\+Move@{On\+Mouse\+Move}}
+\index{On\+Mouse\+Move@{On\+Mouse\+Move}!image\+\_\+tools\+::\+Flash\+Photo\+App@{image\+\_\+tools\+::\+Flash\+Photo\+App}}
+\subsubsection{\texorpdfstring{On\+Mouse\+Move()}{OnMouseMove()}}
+{\footnotesize\ttfamily void image\+\_\+tools\+::\+Flash\+Photo\+App\+::\+On\+Mouse\+Move (\begin{DoxyParamCaption}\item[{const mingfx\+::\+Point2 \&}]{pos,  }\item[{const mingfx\+::\+Vector2 \&}]{delta }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}}
+
+Called when the mouse moves but no mouse buttons are currently pressed. \mbox{\Hypertarget{classimage__tools_1_1FlashPhotoApp_afab3ded368aee035c7c229226048479a}\label{classimage__tools_1_1FlashPhotoApp_afab3ded368aee035c7c229226048479a}} 
+\index{image\+\_\+tools\+::\+Flash\+Photo\+App@{image\+\_\+tools\+::\+Flash\+Photo\+App}!On\+Window\+Resize@{On\+Window\+Resize}}
+\index{On\+Window\+Resize@{On\+Window\+Resize}!image\+\_\+tools\+::\+Flash\+Photo\+App@{image\+\_\+tools\+::\+Flash\+Photo\+App}}
+\subsubsection{\texorpdfstring{On\+Window\+Resize()}{OnWindowResize()}}
+{\footnotesize\ttfamily void image\+\_\+tools\+::\+Flash\+Photo\+App\+::\+On\+Window\+Resize (\begin{DoxyParamCaption}\item[{int}]{new\+\_\+width,  }\item[{int}]{new\+\_\+height }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}}
+
+This function is called when the user drags the corner of the window to resize it. We need to detect that operation because it requires us to resize the underlying pixel buffer. \mbox{\Hypertarget{classimage__tools_1_1FlashPhotoApp_ae5c00d6fcdd2ec8a7979104793273c0a}\label{classimage__tools_1_1FlashPhotoApp_ae5c00d6fcdd2ec8a7979104793273c0a}} 
+\index{image\+\_\+tools\+::\+Flash\+Photo\+App@{image\+\_\+tools\+::\+Flash\+Photo\+App}!Redo@{Redo}}
+\index{Redo@{Redo}!image\+\_\+tools\+::\+Flash\+Photo\+App@{image\+\_\+tools\+::\+Flash\+Photo\+App}}
+\subsubsection{\texorpdfstring{Redo()}{Redo()}}
+{\footnotesize\ttfamily void image\+\_\+tools\+::\+Flash\+Photo\+App\+::\+Redo (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Redo the last \char`\"{}undone\char`\"{} operation. \mbox{\Hypertarget{classimage__tools_1_1FlashPhotoApp_a292e1e58a4848cbf055def1ad0acd79a}\label{classimage__tools_1_1FlashPhotoApp_a292e1e58a4848cbf055def1ad0acd79a}} 
+\index{image\+\_\+tools\+::\+Flash\+Photo\+App@{image\+\_\+tools\+::\+Flash\+Photo\+App}!Save\+To\+File@{Save\+To\+File}}
+\index{Save\+To\+File@{Save\+To\+File}!image\+\_\+tools\+::\+Flash\+Photo\+App@{image\+\_\+tools\+::\+Flash\+Photo\+App}}
+\subsubsection{\texorpdfstring{Save\+To\+File()}{SaveToFile()}}
+{\footnotesize\ttfamily void image\+\_\+tools\+::\+Flash\+Photo\+App\+::\+Save\+To\+File (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{filename }\end{DoxyParamCaption})}
+
+Saves the current pixel buffer to a P\+NG file. \mbox{\Hypertarget{classimage__tools_1_1FlashPhotoApp_ab40b6ecc2ba4caa35b8e18f091b67253}\label{classimage__tools_1_1FlashPhotoApp_ab40b6ecc2ba4caa35b8e18f091b67253}} 
+\index{image\+\_\+tools\+::\+Flash\+Photo\+App@{image\+\_\+tools\+::\+Flash\+Photo\+App}!Start\+Stroke@{Start\+Stroke}}
+\index{Start\+Stroke@{Start\+Stroke}!image\+\_\+tools\+::\+Flash\+Photo\+App@{image\+\_\+tools\+::\+Flash\+Photo\+App}}
+\subsubsection{\texorpdfstring{Start\+Stroke()}{StartStroke()}}
+{\footnotesize\ttfamily void image\+\_\+tools\+::\+Flash\+Photo\+App\+::\+Start\+Stroke (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{tool\+\_\+name,  }\item[{const \hyperlink{classimage__tools_1_1ColorData}{Color\+Data} \&}]{color,  }\item[{float}]{radius,  }\item[{int}]{x,  }\item[{int}]{y }\end{DoxyParamCaption})}
+
+Call this from the controller to being a new stroke at pixel (x,y) using the tool named tool\+\_\+name and the specified color and radius. Since it takes multiple frames to complete a stroke the tool\+\_\+name, color, and radius are saved as state variables and are used for subsequent calls to \hyperlink{classimage__tools_1_1FlashPhotoApp_a1ede0fe70602cbe2d50a3123eda8a937}{Add\+To\+Stroke()} and \hyperlink{classimage__tools_1_1FlashPhotoApp_a34682088e7957ea5e5adf084d2a292a8}{End\+Stroke()}. \mbox{\Hypertarget{classimage__tools_1_1FlashPhotoApp_a03106fe64664faa7eedab93bd91b6b11}\label{classimage__tools_1_1FlashPhotoApp_a03106fe64664faa7eedab93bd91b6b11}} 
+\index{image\+\_\+tools\+::\+Flash\+Photo\+App@{image\+\_\+tools\+::\+Flash\+Photo\+App}!Undo@{Undo}}
+\index{Undo@{Undo}!image\+\_\+tools\+::\+Flash\+Photo\+App@{image\+\_\+tools\+::\+Flash\+Photo\+App}}
+\subsubsection{\texorpdfstring{Undo()}{Undo()}}
+{\footnotesize\ttfamily void image\+\_\+tools\+::\+Flash\+Photo\+App\+::\+Undo (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Undo the last operation. \mbox{\Hypertarget{classimage__tools_1_1FlashPhotoApp_af69350137d0f9f7501853d23a72c7f4e}\label{classimage__tools_1_1FlashPhotoApp_af69350137d0f9f7501853d23a72c7f4e}} 
+\index{image\+\_\+tools\+::\+Flash\+Photo\+App@{image\+\_\+tools\+::\+Flash\+Photo\+App}!Update\+Simulation@{Update\+Simulation}}
+\index{Update\+Simulation@{Update\+Simulation}!image\+\_\+tools\+::\+Flash\+Photo\+App@{image\+\_\+tools\+::\+Flash\+Photo\+App}}
+\subsubsection{\texorpdfstring{Update\+Simulation()}{UpdateSimulation()}}
+{\footnotesize\ttfamily void image\+\_\+tools\+::\+Flash\+Photo\+App\+::\+Update\+Simulation (\begin{DoxyParamCaption}\item[{double}]{dt }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}}
+
+This function gets called once per frame. If the user is in the middle of using a tool that applies more \char`\"{}paint\char`\"{} over time, like a spray can, then this function is used to repeatedly apply the tool to the pixel buffer. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/flashphoto/flashphoto\+\_\+app.\+h\item 
+src/flashphoto/flashphoto\+\_\+app.\+cc\end{DoxyCompactItemize}

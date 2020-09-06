@@ -1,0 +1,72 @@
+\hypertarget{classimage__tools_1_1ToolSprayCan}{}\section{image\+\_\+tools\+:\+:Tool\+Spray\+Can Class Reference}
+\label{classimage__tools_1_1ToolSprayCan}\index{image\+\_\+tools\+::\+Tool\+Spray\+Can@{image\+\_\+tools\+::\+Tool\+Spray\+Can}}
+
+
+{\ttfamily \#include $<$tool\+\_\+spray\+\_\+can.\+h$>$}
+
+
+
+Inheritance diagram for image\+\_\+tools\+:\+:Tool\+Spray\+Can\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=217pt]{classimage__tools_1_1ToolSprayCan__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for image\+\_\+tools\+:\+:Tool\+Spray\+Can\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classimage__tools_1_1ToolSprayCan__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classimage__tools_1_1FloatMatrix}{Float\+Matrix} $\ast$ \hyperlink{classimage__tools_1_1ToolSprayCan_acac77013717667f64c9ffaedf621b553}{Create\+Mask} (float radius) override
+\item 
+bool \hyperlink{classimage__tools_1_1ToolSprayCan_acd1e7907873ef757f200bf669d8dbfd9}{applies\+\_\+paint\+\_\+when\+\_\+stationary} () override
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classimage__tools_1_1ToolSprayCan_af0beec74bf6527306e67688445571c29}\label{classimage__tools_1_1ToolSprayCan_af0beec74bf6527306e67688445571c29}} 
+static const std\+::string {\bfseries name} ()
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+This tool has a linear falloff so that it looks like the paint has been sprayed onto the canvas. It also has the interesting property that it continues to paint even when held stationary so paint continues to accumulate on the canvas the longer you hold it still. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classimage__tools_1_1ToolSprayCan_acd1e7907873ef757f200bf669d8dbfd9}\label{classimage__tools_1_1ToolSprayCan_acd1e7907873ef757f200bf669d8dbfd9}} 
+\index{image\+\_\+tools\+::\+Tool\+Spray\+Can@{image\+\_\+tools\+::\+Tool\+Spray\+Can}!applies\+\_\+paint\+\_\+when\+\_\+stationary@{applies\+\_\+paint\+\_\+when\+\_\+stationary}}
+\index{applies\+\_\+paint\+\_\+when\+\_\+stationary@{applies\+\_\+paint\+\_\+when\+\_\+stationary}!image\+\_\+tools\+::\+Tool\+Spray\+Can@{image\+\_\+tools\+::\+Tool\+Spray\+Can}}
+\subsubsection{\texorpdfstring{applies\+\_\+paint\+\_\+when\+\_\+stationary()}{applies\_paint\_when\_stationary()}}
+{\footnotesize\ttfamily bool image\+\_\+tools\+::\+Tool\+Spray\+Can\+::applies\+\_\+paint\+\_\+when\+\_\+stationary (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Most tools only apply \char`\"{}paint\char`\"{} when they are moved on the canvas, but some, like a spray can continue applying more paint over time even if they are held in the same place. Subclasses should override this function and return true if the tool allows paint to accumulate even when held stationary. The default implmentation returns false. 
+
+Reimplemented from \hyperlink{classimage__tools_1_1Tool_a84b6d2c885d11cf1990a3c7a1343a05f}{image\+\_\+tools\+::\+Tool}.
+
+\mbox{\Hypertarget{classimage__tools_1_1ToolSprayCan_acac77013717667f64c9ffaedf621b553}\label{classimage__tools_1_1ToolSprayCan_acac77013717667f64c9ffaedf621b553}} 
+\index{image\+\_\+tools\+::\+Tool\+Spray\+Can@{image\+\_\+tools\+::\+Tool\+Spray\+Can}!Create\+Mask@{Create\+Mask}}
+\index{Create\+Mask@{Create\+Mask}!image\+\_\+tools\+::\+Tool\+Spray\+Can@{image\+\_\+tools\+::\+Tool\+Spray\+Can}}
+\subsubsection{\texorpdfstring{Create\+Mask()}{CreateMask()}}
+{\footnotesize\ttfamily \hyperlink{classimage__tools_1_1FloatMatrix}{Float\+Matrix} $\ast$ image\+\_\+tools\+::\+Tool\+Spray\+Can\+::\+Create\+Mask (\begin{DoxyParamCaption}\item[{float}]{radius }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Subclasses must fill in this factory method to define the mask for the specific tool they implement. 
+
+Implements \hyperlink{classimage__tools_1_1Tool_a7d58325846dbc0467e52221daa1310a7}{image\+\_\+tools\+::\+Tool}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/imagetools/tool\+\_\+spray\+\_\+can.\+h\item 
+src/imagetools/tool\+\_\+spray\+\_\+can.\+cc\end{DoxyCompactItemize}

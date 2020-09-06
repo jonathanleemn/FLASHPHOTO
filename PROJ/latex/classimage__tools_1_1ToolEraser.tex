@@ -1,0 +1,77 @@
+\hypertarget{classimage__tools_1_1ToolEraser}{}\section{image\+\_\+tools\+:\+:Tool\+Eraser Class Reference}
+\label{classimage__tools_1_1ToolEraser}\index{image\+\_\+tools\+::\+Tool\+Eraser@{image\+\_\+tools\+::\+Tool\+Eraser}}
+
+
+This tool simulates an Eraser. It overrides the \hyperlink{classimage__tools_1_1Tool}{Tool}\textquotesingle{}s Start\+Stroke method to change the paint\+\_\+color to be the canvas\textquotesingle{}s background color.  
+
+
+
+
+{\ttfamily \#include $<$tool\+\_\+eraser.\+h$>$}
+
+
+
+Inheritance diagram for image\+\_\+tools\+:\+:Tool\+Eraser\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=202pt]{classimage__tools_1_1ToolEraser__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for image\+\_\+tools\+:\+:Tool\+Eraser\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classimage__tools_1_1ToolEraser__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classimage__tools_1_1FloatMatrix}{Float\+Matrix} $\ast$ \hyperlink{classimage__tools_1_1ToolEraser_a5720244391587679acb8645a3fbd3d63}{Create\+Mask} (float radius) override
+\item 
+void \hyperlink{classimage__tools_1_1ToolEraser_a5b00cd104c6fb0b34fa3f1f5165ab189}{Start\+Stroke} (\hyperlink{classimage__tools_1_1PixelBuffer}{Pixel\+Buffer} $\ast$buffer, int x, int y, const \hyperlink{classimage__tools_1_1ColorData}{Color\+Data} \&paint\+\_\+color, float radius) override
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classimage__tools_1_1ToolEraser_a95d93a6bb8ab437f44f4846c6d08c74f}\label{classimage__tools_1_1ToolEraser_a95d93a6bb8ab437f44f4846c6d08c74f}} 
+static const std\+::string {\bfseries name} ()
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+This tool simulates an Eraser. It overrides the \hyperlink{classimage__tools_1_1Tool}{Tool}\textquotesingle{}s Start\+Stroke method to change the paint\+\_\+color to be the canvas\textquotesingle{}s background color. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classimage__tools_1_1ToolEraser_a5720244391587679acb8645a3fbd3d63}\label{classimage__tools_1_1ToolEraser_a5720244391587679acb8645a3fbd3d63}} 
+\index{image\+\_\+tools\+::\+Tool\+Eraser@{image\+\_\+tools\+::\+Tool\+Eraser}!Create\+Mask@{Create\+Mask}}
+\index{Create\+Mask@{Create\+Mask}!image\+\_\+tools\+::\+Tool\+Eraser@{image\+\_\+tools\+::\+Tool\+Eraser}}
+\subsubsection{\texorpdfstring{Create\+Mask()}{CreateMask()}}
+{\footnotesize\ttfamily \hyperlink{classimage__tools_1_1FloatMatrix}{Float\+Matrix} $\ast$ image\+\_\+tools\+::\+Tool\+Eraser\+::\+Create\+Mask (\begin{DoxyParamCaption}\item[{float}]{radius }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Subclasses must fill in this factory method to define the mask for the specific tool they implement. 
+
+Implements \hyperlink{classimage__tools_1_1Tool_a7d58325846dbc0467e52221daa1310a7}{image\+\_\+tools\+::\+Tool}.
+
+\mbox{\Hypertarget{classimage__tools_1_1ToolEraser_a5b00cd104c6fb0b34fa3f1f5165ab189}\label{classimage__tools_1_1ToolEraser_a5b00cd104c6fb0b34fa3f1f5165ab189}} 
+\index{image\+\_\+tools\+::\+Tool\+Eraser@{image\+\_\+tools\+::\+Tool\+Eraser}!Start\+Stroke@{Start\+Stroke}}
+\index{Start\+Stroke@{Start\+Stroke}!image\+\_\+tools\+::\+Tool\+Eraser@{image\+\_\+tools\+::\+Tool\+Eraser}}
+\subsubsection{\texorpdfstring{Start\+Stroke()}{StartStroke()}}
+{\footnotesize\ttfamily void image\+\_\+tools\+::\+Tool\+Eraser\+::\+Start\+Stroke (\begin{DoxyParamCaption}\item[{\hyperlink{classimage__tools_1_1PixelBuffer}{Pixel\+Buffer} $\ast$}]{buffer,  }\item[{int}]{x,  }\item[{int}]{y,  }\item[{const \hyperlink{classimage__tools_1_1ColorData}{Color\+Data} \&}]{paint\+\_\+color,  }\item[{float}]{radius }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+The controller (typically the G\+UI class) must call this method each time the user starts a new stroke. The buffer, paint\+\_\+color, and radius are saved in state variables so that they can be used by subsequent calls to \hyperlink{classimage__tools_1_1Tool_a84d87d7baec8a961be236d4b30636fc0}{Add\+To\+Stroke()} and \hyperlink{classimage__tools_1_1Tool_aa76f5cae95ea7cdc30b067b84857a0f5}{End\+Stroke()}. 
+
+Reimplemented from \hyperlink{classimage__tools_1_1Tool_a1b7cd7d59588923d7e29b6150334f5b8}{image\+\_\+tools\+::\+Tool}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/imagetools/tool\+\_\+eraser.\+h\item 
+src/imagetools/tool\+\_\+eraser.\+cc\end{DoxyCompactItemize}

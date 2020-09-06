@@ -1,0 +1,64 @@
+\hypertarget{classimage__tools_1_1FilterChannels}{}\section{image\+\_\+tools\+:\+:Filter\+Channels Class Reference}
+\label{classimage__tools_1_1FilterChannels}\index{image\+\_\+tools\+::\+Filter\+Channels@{image\+\_\+tools\+::\+Filter\+Channels}}
+
+
+Implements a filter by adjusting the red, green, blue values of each pixel.  
+
+
+
+
+{\ttfamily \#include $<$filter\+\_\+channels.\+h$>$}
+
+
+
+Inheritance diagram for image\+\_\+tools\+:\+:Filter\+Channels\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=218pt]{classimage__tools_1_1FilterChannels__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for image\+\_\+tools\+:\+:Filter\+Channels\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=218pt]{classimage__tools_1_1FilterChannels__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classimage__tools_1_1FilterChannels_aabe05d8cef0727cd96baa22d18b2e50e}\label{classimage__tools_1_1FilterChannels_aabe05d8cef0727cd96baa22d18b2e50e}} 
+\hyperlink{classimage__tools_1_1FilterChannels_aabe05d8cef0727cd96baa22d18b2e50e}{Filter\+Channels} ()
+\begin{DoxyCompactList}\small\item\em Defaults to r=0.\+5, g=0.\+5, and b=0.\+5. \end{DoxyCompactList}\item 
+\hyperlink{classimage__tools_1_1ColorData}{Color\+Data} \hyperlink{classimage__tools_1_1FilterChannels_a99af7bdf46f4d606fae4baa793025836}{Calculate\+Filtered\+Pixel} (\hyperlink{classimage__tools_1_1PixelBuffer}{Pixel\+Buffer} $\ast$buffer, int x, int y) override
+\item 
+\mbox{\Hypertarget{classimage__tools_1_1FilterChannels_a2c48ab1acde424eee37af26745f9ce29}\label{classimage__tools_1_1FilterChannels_a2c48ab1acde424eee37af26745f9ce29}} 
+void {\bfseries Set\+Values} (float r, float g, float b)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Implements a filter by adjusting the red, green, blue values of each pixel. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classimage__tools_1_1FilterChannels_a99af7bdf46f4d606fae4baa793025836}\label{classimage__tools_1_1FilterChannels_a99af7bdf46f4d606fae4baa793025836}} 
+\index{image\+\_\+tools\+::\+Filter\+Channels@{image\+\_\+tools\+::\+Filter\+Channels}!Calculate\+Filtered\+Pixel@{Calculate\+Filtered\+Pixel}}
+\index{Calculate\+Filtered\+Pixel@{Calculate\+Filtered\+Pixel}!image\+\_\+tools\+::\+Filter\+Channels@{image\+\_\+tools\+::\+Filter\+Channels}}
+\subsubsection{\texorpdfstring{Calculate\+Filtered\+Pixel()}{CalculateFilteredPixel()}}
+{\footnotesize\ttfamily \hyperlink{classimage__tools_1_1ColorData}{Color\+Data} image\+\_\+tools\+::\+Filter\+Channels\+::\+Calculate\+Filtered\+Pixel (\begin{DoxyParamCaption}\item[{\hyperlink{classimage__tools_1_1PixelBuffer}{Pixel\+Buffer} $\ast$}]{buffer,  }\item[{int}]{x,  }\item[{int}]{y }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Applies a filter by looping through each pixel in an image and modifying that pixel. 
+
+Reimplemented from \hyperlink{classimage__tools_1_1Filter_a68d38fa12b87e20b81090cb380c0a307}{image\+\_\+tools\+::\+Filter}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/imagetools/filter\+\_\+channels.\+h\item 
+src/imagetools/filter\+\_\+channels.\+cc\end{DoxyCompactItemize}

@@ -1,0 +1,69 @@
+\hypertarget{classimage__tools_1_1Filter}{}\section{image\+\_\+tools\+:\+:Filter Class Reference}
+\label{classimage__tools_1_1Filter}\index{image\+\_\+tools\+::\+Filter@{image\+\_\+tools\+::\+Filter}}
+
+
+Serves as the parent class to implement all filters. Modifies an image by changing each pixel value within the image.  
+
+
+
+
+{\ttfamily \#include $<$filter.\+h$>$}
+
+
+
+Inheritance diagram for image\+\_\+tools\+:\+:Filter\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classimage__tools_1_1Filter__inherit__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classimage__tools_1_1Filter_af621f9c2221e0a5310322413f0adfca5}\label{classimage__tools_1_1Filter_af621f9c2221e0a5310322413f0adfca5}} 
+virtual void {\bfseries Setup\+Filter} ()
+\item 
+\mbox{\Hypertarget{classimage__tools_1_1Filter_abb92717e3b5d762720d8a80f6b10dd5d}\label{classimage__tools_1_1Filter_abb92717e3b5d762720d8a80f6b10dd5d}} 
+virtual void \hyperlink{classimage__tools_1_1Filter_abb92717e3b5d762720d8a80f6b10dd5d}{Cleanup\+Filter} ()
+\begin{DoxyCompactList}\small\item\em Deletes pointer. \end{DoxyCompactList}\item 
+virtual bool \hyperlink{classimage__tools_1_1Filter_abb21c6ce1f09a4ce4fbd38255c44d281}{can\+\_\+copy\+\_\+in\+\_\+place} ()
+\item 
+virtual \hyperlink{classimage__tools_1_1ColorData}{Color\+Data} \hyperlink{classimage__tools_1_1Filter_a68d38fa12b87e20b81090cb380c0a307}{Calculate\+Filtered\+Pixel} (\hyperlink{classimage__tools_1_1PixelBuffer}{Pixel\+Buffer} $\ast$buffer, int x, int y)
+\item 
+\mbox{\Hypertarget{classimage__tools_1_1Filter_a2e546a29d5c7dc1d7fff50d0f06b4c2b}\label{classimage__tools_1_1Filter_a2e546a29d5c7dc1d7fff50d0f06b4c2b}} 
+void {\bfseries Apply\+To\+Buffer} (\hyperlink{classimage__tools_1_1PixelBuffer}{Pixel\+Buffer} $\ast$buffer)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Serves as the parent class to implement all filters. Modifies an image by changing each pixel value within the image. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classimage__tools_1_1Filter_a68d38fa12b87e20b81090cb380c0a307}\label{classimage__tools_1_1Filter_a68d38fa12b87e20b81090cb380c0a307}} 
+\index{image\+\_\+tools\+::\+Filter@{image\+\_\+tools\+::\+Filter}!Calculate\+Filtered\+Pixel@{Calculate\+Filtered\+Pixel}}
+\index{Calculate\+Filtered\+Pixel@{Calculate\+Filtered\+Pixel}!image\+\_\+tools\+::\+Filter@{image\+\_\+tools\+::\+Filter}}
+\subsubsection{\texorpdfstring{Calculate\+Filtered\+Pixel()}{CalculateFilteredPixel()}}
+{\footnotesize\ttfamily \hyperlink{classimage__tools_1_1ColorData}{Color\+Data} image\+\_\+tools\+::\+Filter\+::\+Calculate\+Filtered\+Pixel (\begin{DoxyParamCaption}\item[{\hyperlink{classimage__tools_1_1PixelBuffer}{Pixel\+Buffer} $\ast$}]{buffer,  }\item[{int}]{x,  }\item[{int}]{y }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Applies a filter by looping through each pixel in an image and modifying that pixel. 
+
+Reimplemented in \hyperlink{classimage__tools_1_1ConvolutionFilter_a2d35a2e2a2d1303d0a6824b16406d97b}{image\+\_\+tools\+::\+Convolution\+Filter}, \hyperlink{classimage__tools_1_1FilterQuantize_a312afa1aa4af5c58b7ec6d5faad0a176}{image\+\_\+tools\+::\+Filter\+Quantize}, \hyperlink{classimage__tools_1_1FilterSaturate_a86ab1b87e52a5f9b5c8642531ed7fdc6}{image\+\_\+tools\+::\+Filter\+Saturate}, \hyperlink{classimage__tools_1_1FilterThreshold_a905065fd47d7228b11354795e487b2c6}{image\+\_\+tools\+::\+Filter\+Threshold}, and \hyperlink{classimage__tools_1_1FilterChannels_a99af7bdf46f4d606fae4baa793025836}{image\+\_\+tools\+::\+Filter\+Channels}.
+
+\mbox{\Hypertarget{classimage__tools_1_1Filter_abb21c6ce1f09a4ce4fbd38255c44d281}\label{classimage__tools_1_1Filter_abb21c6ce1f09a4ce4fbd38255c44d281}} 
+\index{image\+\_\+tools\+::\+Filter@{image\+\_\+tools\+::\+Filter}!can\+\_\+copy\+\_\+in\+\_\+place@{can\+\_\+copy\+\_\+in\+\_\+place}}
+\index{can\+\_\+copy\+\_\+in\+\_\+place@{can\+\_\+copy\+\_\+in\+\_\+place}!image\+\_\+tools\+::\+Filter@{image\+\_\+tools\+::\+Filter}}
+\subsubsection{\texorpdfstring{can\+\_\+copy\+\_\+in\+\_\+place()}{can\_copy\_in\_place()}}
+{\footnotesize\ttfamily bool image\+\_\+tools\+::\+Filter\+::can\+\_\+copy\+\_\+in\+\_\+place (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Simple filters (\hyperlink{classimage__tools_1_1FilterChannels}{Filter\+Channels}, \hyperlink{classimage__tools_1_1FilterQuantize}{Filter\+Quantize}, \hyperlink{classimage__tools_1_1FilterSaturate}{Filter\+Saturate}, and \hyperlink{classimage__tools_1_1FilterThreshold}{Filter\+Threshold}) can be copied in place, whereas convolution filters (\hyperlink{classimage__tools_1_1ConvolutionFilterBlur}{Convolution\+Filter\+Blur}, \hyperlink{classimage__tools_1_1ConvolutionFilterEdgeDetect}{Convolution\+Filter\+Edge\+Detect}, \hyperlink{classimage__tools_1_1ConvolutionFilterMotionBlur}{Convolution\+Filter\+Motion\+Blur}, and \hyperlink{classimage__tools_1_1ConvolutionFilterSharpen}{Convolution\+Filter\+Sharpen} ) cannot. 
+
+Reimplemented in \hyperlink{classimage__tools_1_1ConvolutionFilter_aef03779d74d96173880d93d06c7bd6b6}{image\+\_\+tools\+::\+Convolution\+Filter}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/imagetools/filter.\+h\item 
+src/imagetools/filter.\+cc\end{DoxyCompactItemize}

@@ -1,0 +1,64 @@
+\hypertarget{classimage__tools_1_1FilterSaturate}{}\section{image\+\_\+tools\+:\+:Filter\+Saturate Class Reference}
+\label{classimage__tools_1_1FilterSaturate}\index{image\+\_\+tools\+::\+Filter\+Saturate@{image\+\_\+tools\+::\+Filter\+Saturate}}
+
+
+Implements a filter by increasing or decreasing the intensity of an image\textquotesingle{}s colors.  
+
+
+
+
+{\ttfamily \#include $<$filter\+\_\+saturate.\+h$>$}
+
+
+
+Inheritance diagram for image\+\_\+tools\+:\+:Filter\+Saturate\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=214pt]{classimage__tools_1_1FilterSaturate__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for image\+\_\+tools\+:\+:Filter\+Saturate\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=214pt]{classimage__tools_1_1FilterSaturate__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classimage__tools_1_1FilterSaturate_adb9cbb52d0cbcbb301eebcbced82bd3d}\label{classimage__tools_1_1FilterSaturate_adb9cbb52d0cbcbb301eebcbced82bd3d}} 
+\hyperlink{classimage__tools_1_1FilterSaturate_adb9cbb52d0cbcbb301eebcbced82bd3d}{Filter\+Saturate} ()
+\begin{DoxyCompactList}\small\item\em Defaults to sat\+\_\+value=0.\+5. \end{DoxyCompactList}\item 
+\hyperlink{classimage__tools_1_1ColorData}{Color\+Data} \hyperlink{classimage__tools_1_1FilterSaturate_a86ab1b87e52a5f9b5c8642531ed7fdc6}{Calculate\+Filtered\+Pixel} (\hyperlink{classimage__tools_1_1PixelBuffer}{Pixel\+Buffer} $\ast$buffer, int x, int y) override
+\item 
+\mbox{\Hypertarget{classimage__tools_1_1FilterSaturate_a31182a6d8f384ac6d73c8367d1776535}\label{classimage__tools_1_1FilterSaturate_a31182a6d8f384ac6d73c8367d1776535}} 
+void {\bfseries Set\+Value} (float sat\+\_\+val)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Implements a filter by increasing or decreasing the intensity of an image\textquotesingle{}s colors. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classimage__tools_1_1FilterSaturate_a86ab1b87e52a5f9b5c8642531ed7fdc6}\label{classimage__tools_1_1FilterSaturate_a86ab1b87e52a5f9b5c8642531ed7fdc6}} 
+\index{image\+\_\+tools\+::\+Filter\+Saturate@{image\+\_\+tools\+::\+Filter\+Saturate}!Calculate\+Filtered\+Pixel@{Calculate\+Filtered\+Pixel}}
+\index{Calculate\+Filtered\+Pixel@{Calculate\+Filtered\+Pixel}!image\+\_\+tools\+::\+Filter\+Saturate@{image\+\_\+tools\+::\+Filter\+Saturate}}
+\subsubsection{\texorpdfstring{Calculate\+Filtered\+Pixel()}{CalculateFilteredPixel()}}
+{\footnotesize\ttfamily \hyperlink{classimage__tools_1_1ColorData}{Color\+Data} image\+\_\+tools\+::\+Filter\+Saturate\+::\+Calculate\+Filtered\+Pixel (\begin{DoxyParamCaption}\item[{\hyperlink{classimage__tools_1_1PixelBuffer}{Pixel\+Buffer} $\ast$}]{buffer,  }\item[{int}]{x,  }\item[{int}]{y }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Applies a filter by looping through each pixel in an image and modifying that pixel. 
+
+Reimplemented from \hyperlink{classimage__tools_1_1Filter_a68d38fa12b87e20b81090cb380c0a307}{image\+\_\+tools\+::\+Filter}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/imagetools/filter\+\_\+saturate.\+h\item 
+src/imagetools/filter\+\_\+saturate.\+cc\end{DoxyCompactItemize}

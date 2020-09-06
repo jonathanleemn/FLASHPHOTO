@@ -1,0 +1,144 @@
+\hypertarget{classimage__tools_1_1PixelBuffer}{}\section{image\+\_\+tools\+:\+:Pixel\+Buffer Class Reference}
+\label{classimage__tools_1_1PixelBuffer}\index{image\+\_\+tools\+::\+Pixel\+Buffer@{image\+\_\+tools\+::\+Pixel\+Buffer}}
+
+
+Stores an array of \hyperlink{classimage__tools_1_1ColorData}{Color\+Data}, such as an image that can be drawn to the screen.  
+
+
+
+
+{\ttfamily \#include $<$pixel\+\_\+buffer.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classimage__tools_1_1PixelBuffer_a4f5b5df93389946d70bc001acfebcedb}{Pixel\+Buffer} (int w, int h, \hyperlink{classimage__tools_1_1ColorData}{Color\+Data} \hyperlink{classimage__tools_1_1PixelBuffer_a3d6b71aeb5d7ec8a204aac67df7b83ac}{background\+\_\+color})
+\item 
+\hyperlink{classimage__tools_1_1PixelBuffer_a22e3446de759c42e6be6f290feca8461}{Pixel\+Buffer} (const std\+::string \&filename)
+\item 
+\hyperlink{classimage__tools_1_1PixelBuffer_a25b0c7d5686807d187ee799a5fbb1121}{Pixel\+Buffer} (const \hyperlink{classimage__tools_1_1PixelBuffer}{Pixel\+Buffer} \&rhs)
+\item 
+\hyperlink{classimage__tools_1_1PixelBuffer}{Pixel\+Buffer} \& \hyperlink{classimage__tools_1_1PixelBuffer_a95f63d0b72c4d0b371c556597cf77578}{operator=} (const \hyperlink{classimage__tools_1_1PixelBuffer}{Pixel\+Buffer} \&rhs)
+\item 
+\mbox{\Hypertarget{classimage__tools_1_1PixelBuffer_ab2bd64291a4275421bc72268da2143be}\label{classimage__tools_1_1PixelBuffer_ab2bd64291a4275421bc72268da2143be}} 
+int {\bfseries height} () const
+\item 
+\mbox{\Hypertarget{classimage__tools_1_1PixelBuffer_a80cdd8ef54915b4549f8c6fc86f6dccc}\label{classimage__tools_1_1PixelBuffer_a80cdd8ef54915b4549f8c6fc86f6dccc}} 
+int {\bfseries width} () const
+\item 
+const \hyperlink{classimage__tools_1_1ColorData}{Color\+Data} \& \hyperlink{classimage__tools_1_1PixelBuffer_a3d6b71aeb5d7ec8a204aac67df7b83ac}{background\+\_\+color} () const
+\begin{DoxyCompactList}\small\item\em Get the background color that was used to initialize the \hyperlink{classimage__tools_1_1PixelBuffer}{Pixel\+Buffer}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classimage__tools_1_1PixelBuffer_a4321d9a8751015b998ce51c59f0a94b9}\label{classimage__tools_1_1PixelBuffer_a4321d9a8751015b998ce51c59f0a94b9}} 
+\hyperlink{classimage__tools_1_1ColorData}{Color\+Data} \hyperlink{classimage__tools_1_1PixelBuffer_a4321d9a8751015b998ce51c59f0a94b9}{pixel} (int x, int y) const
+\begin{DoxyCompactList}\small\item\em Get the color of a specific pixel. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classimage__tools_1_1PixelBuffer_ac3559133504c49f3af9a00544411c3b8}\label{classimage__tools_1_1PixelBuffer_ac3559133504c49f3af9a00544411c3b8}} 
+void \hyperlink{classimage__tools_1_1PixelBuffer_ac3559133504c49f3af9a00544411c3b8}{set\+\_\+pixel} (int x, int y, const \hyperlink{classimage__tools_1_1ColorData}{Color\+Data} \&color)
+\begin{DoxyCompactList}\small\item\em Set the value for a specific pixel. \end{DoxyCompactList}\item 
+float const  $\ast$ \hyperlink{classimage__tools_1_1PixelBuffer_a8f7b9f293b7ac93f8c33f75f50ce5a7b}{data} () const
+\item 
+void \hyperlink{classimage__tools_1_1PixelBuffer_a001dbd44de2d3f19b04180cdbc897b97}{Resize} (int new\+\_\+width, int new\+\_\+height)
+\item 
+void \hyperlink{classimage__tools_1_1PixelBuffer_ae3f65414f52d3df79c89c88d2a4db288}{Save\+To\+File} (const std\+::string \&filename)
+\item 
+void \hyperlink{classimage__tools_1_1PixelBuffer_aaa5f861df2ec901617aadeb5016bdf1e}{Load\+From\+File} (const std\+::string \&filename)
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+bool \hyperlink{classimage__tools_1_1PixelBuffer_a68aef4100a6c7062d102b566dc382543}{operator==} (const \hyperlink{classimage__tools_1_1PixelBuffer}{Pixel\+Buffer} \&a, const \hyperlink{classimage__tools_1_1PixelBuffer}{Pixel\+Buffer} \&b)
+\item 
+bool \hyperlink{classimage__tools_1_1PixelBuffer_a9751369b6acaba6bc42143cc2b7314ea}{operator!=} (const \hyperlink{classimage__tools_1_1PixelBuffer}{Pixel\+Buffer} \&a, const \hyperlink{classimage__tools_1_1PixelBuffer}{Pixel\+Buffer} \&b)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Stores an array of \hyperlink{classimage__tools_1_1ColorData}{Color\+Data}, such as an image that can be drawn to the screen. 
+
+The data are stored internally in a 1D array, laid out in row-\/major order with 4 floats (R\+G\+BA) for each pixel in the image. The raw data can be accessed directly with \hyperlink{classimage__tools_1_1PixelBuffer_a8f7b9f293b7ac93f8c33f75f50ce5a7b}{data()} and individual pixels can be accessed with get\+\_\+pixel(x,y). 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classimage__tools_1_1PixelBuffer_a4f5b5df93389946d70bc001acfebcedb}\label{classimage__tools_1_1PixelBuffer_a4f5b5df93389946d70bc001acfebcedb}} 
+\index{image\+\_\+tools\+::\+Pixel\+Buffer@{image\+\_\+tools\+::\+Pixel\+Buffer}!Pixel\+Buffer@{Pixel\+Buffer}}
+\index{Pixel\+Buffer@{Pixel\+Buffer}!image\+\_\+tools\+::\+Pixel\+Buffer@{image\+\_\+tools\+::\+Pixel\+Buffer}}
+\subsubsection{\texorpdfstring{Pixel\+Buffer()}{PixelBuffer()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily image\+\_\+tools\+::\+Pixel\+Buffer\+::\+Pixel\+Buffer (\begin{DoxyParamCaption}\item[{int}]{w,  }\item[{int}]{h,  }\item[{\hyperlink{classimage__tools_1_1ColorData}{Color\+Data}}]{background\+\_\+color }\end{DoxyParamCaption})}
+
+Fills the new pixel buffer with the background color. \mbox{\Hypertarget{classimage__tools_1_1PixelBuffer_a22e3446de759c42e6be6f290feca8461}\label{classimage__tools_1_1PixelBuffer_a22e3446de759c42e6be6f290feca8461}} 
+\index{image\+\_\+tools\+::\+Pixel\+Buffer@{image\+\_\+tools\+::\+Pixel\+Buffer}!Pixel\+Buffer@{Pixel\+Buffer}}
+\index{Pixel\+Buffer@{Pixel\+Buffer}!image\+\_\+tools\+::\+Pixel\+Buffer@{image\+\_\+tools\+::\+Pixel\+Buffer}}
+\subsubsection{\texorpdfstring{Pixel\+Buffer()}{PixelBuffer()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily image\+\_\+tools\+::\+Pixel\+Buffer\+::\+Pixel\+Buffer (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{filename }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+Loads a P\+NG image and stores it in the buffer. Sets the background color to white. \mbox{\Hypertarget{classimage__tools_1_1PixelBuffer_a25b0c7d5686807d187ee799a5fbb1121}\label{classimage__tools_1_1PixelBuffer_a25b0c7d5686807d187ee799a5fbb1121}} 
+\index{image\+\_\+tools\+::\+Pixel\+Buffer@{image\+\_\+tools\+::\+Pixel\+Buffer}!Pixel\+Buffer@{Pixel\+Buffer}}
+\index{Pixel\+Buffer@{Pixel\+Buffer}!image\+\_\+tools\+::\+Pixel\+Buffer@{image\+\_\+tools\+::\+Pixel\+Buffer}}
+\subsubsection{\texorpdfstring{Pixel\+Buffer()}{PixelBuffer()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily image\+\_\+tools\+::\+Pixel\+Buffer\+::\+Pixel\+Buffer (\begin{DoxyParamCaption}\item[{const \hyperlink{classimage__tools_1_1PixelBuffer}{Pixel\+Buffer} \&}]{rhs }\end{DoxyParamCaption})}
+
+Copy constructor 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classimage__tools_1_1PixelBuffer_a3d6b71aeb5d7ec8a204aac67df7b83ac}\label{classimage__tools_1_1PixelBuffer_a3d6b71aeb5d7ec8a204aac67df7b83ac}} 
+\index{image\+\_\+tools\+::\+Pixel\+Buffer@{image\+\_\+tools\+::\+Pixel\+Buffer}!background\+\_\+color@{background\+\_\+color}}
+\index{background\+\_\+color@{background\+\_\+color}!image\+\_\+tools\+::\+Pixel\+Buffer@{image\+\_\+tools\+::\+Pixel\+Buffer}}
+\subsubsection{\texorpdfstring{background\+\_\+color()}{background\_color()}}
+{\footnotesize\ttfamily const \hyperlink{classimage__tools_1_1ColorData}{Color\+Data}\& image\+\_\+tools\+::\+Pixel\+Buffer\+::background\+\_\+color (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the background color that was used to initialize the \hyperlink{classimage__tools_1_1PixelBuffer}{Pixel\+Buffer}. 
+
+\begin{DoxyReturn}{Returns}
+The background color 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classimage__tools_1_1PixelBuffer_a8f7b9f293b7ac93f8c33f75f50ce5a7b}\label{classimage__tools_1_1PixelBuffer_a8f7b9f293b7ac93f8c33f75f50ce5a7b}} 
+\index{image\+\_\+tools\+::\+Pixel\+Buffer@{image\+\_\+tools\+::\+Pixel\+Buffer}!data@{data}}
+\index{data@{data}!image\+\_\+tools\+::\+Pixel\+Buffer@{image\+\_\+tools\+::\+Pixel\+Buffer}}
+\subsubsection{\texorpdfstring{data()}{data()}}
+{\footnotesize\ttfamily float const$\ast$ image\+\_\+tools\+::\+Pixel\+Buffer\+::data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Returns a pointer to the raw pixel data array stored in row-\/major order as R\+G\+BA floats. \mbox{\Hypertarget{classimage__tools_1_1PixelBuffer_aaa5f861df2ec901617aadeb5016bdf1e}\label{classimage__tools_1_1PixelBuffer_aaa5f861df2ec901617aadeb5016bdf1e}} 
+\index{image\+\_\+tools\+::\+Pixel\+Buffer@{image\+\_\+tools\+::\+Pixel\+Buffer}!Load\+From\+File@{Load\+From\+File}}
+\index{Load\+From\+File@{Load\+From\+File}!image\+\_\+tools\+::\+Pixel\+Buffer@{image\+\_\+tools\+::\+Pixel\+Buffer}}
+\subsubsection{\texorpdfstring{Load\+From\+File()}{LoadFromFile()}}
+{\footnotesize\ttfamily void image\+\_\+tools\+::\+Pixel\+Buffer\+::\+Load\+From\+File (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{filename }\end{DoxyParamCaption})}
+
+Loads from a P\+NG file. Will resize the buffer as needed. \mbox{\Hypertarget{classimage__tools_1_1PixelBuffer_a95f63d0b72c4d0b371c556597cf77578}\label{classimage__tools_1_1PixelBuffer_a95f63d0b72c4d0b371c556597cf77578}} 
+\index{image\+\_\+tools\+::\+Pixel\+Buffer@{image\+\_\+tools\+::\+Pixel\+Buffer}!operator=@{operator=}}
+\index{operator=@{operator=}!image\+\_\+tools\+::\+Pixel\+Buffer@{image\+\_\+tools\+::\+Pixel\+Buffer}}
+\subsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily \hyperlink{classimage__tools_1_1PixelBuffer}{Pixel\+Buffer} \& image\+\_\+tools\+::\+Pixel\+Buffer\+::operator= (\begin{DoxyParamCaption}\item[{const \hyperlink{classimage__tools_1_1PixelBuffer}{Pixel\+Buffer} \&}]{rhs }\end{DoxyParamCaption})}
+
+Assignment operator \mbox{\Hypertarget{classimage__tools_1_1PixelBuffer_a001dbd44de2d3f19b04180cdbc897b97}\label{classimage__tools_1_1PixelBuffer_a001dbd44de2d3f19b04180cdbc897b97}} 
+\index{image\+\_\+tools\+::\+Pixel\+Buffer@{image\+\_\+tools\+::\+Pixel\+Buffer}!Resize@{Resize}}
+\index{Resize@{Resize}!image\+\_\+tools\+::\+Pixel\+Buffer@{image\+\_\+tools\+::\+Pixel\+Buffer}}
+\subsubsection{\texorpdfstring{Resize()}{Resize()}}
+{\footnotesize\ttfamily void image\+\_\+tools\+::\+Pixel\+Buffer\+::\+Resize (\begin{DoxyParamCaption}\item[{int}]{new\+\_\+width,  }\item[{int}]{new\+\_\+height }\end{DoxyParamCaption})}
+
+Resizes the buffer, cropping the image and/or creating new pixels as needed. New pixels will use the background color. \mbox{\Hypertarget{classimage__tools_1_1PixelBuffer_ae3f65414f52d3df79c89c88d2a4db288}\label{classimage__tools_1_1PixelBuffer_ae3f65414f52d3df79c89c88d2a4db288}} 
+\index{image\+\_\+tools\+::\+Pixel\+Buffer@{image\+\_\+tools\+::\+Pixel\+Buffer}!Save\+To\+File@{Save\+To\+File}}
+\index{Save\+To\+File@{Save\+To\+File}!image\+\_\+tools\+::\+Pixel\+Buffer@{image\+\_\+tools\+::\+Pixel\+Buffer}}
+\subsubsection{\texorpdfstring{Save\+To\+File()}{SaveToFile()}}
+{\footnotesize\ttfamily void image\+\_\+tools\+::\+Pixel\+Buffer\+::\+Save\+To\+File (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{filename }\end{DoxyParamCaption})}
+
+Saves to a P\+NG file, the filename should include a .png extension. 
+
+\subsection{Friends And Related Function Documentation}
+\mbox{\Hypertarget{classimage__tools_1_1PixelBuffer_a9751369b6acaba6bc42143cc2b7314ea}\label{classimage__tools_1_1PixelBuffer_a9751369b6acaba6bc42143cc2b7314ea}} 
+\index{image\+\_\+tools\+::\+Pixel\+Buffer@{image\+\_\+tools\+::\+Pixel\+Buffer}!operator"!=@{operator"!=}}
+\index{operator"!=@{operator"!=}!image\+\_\+tools\+::\+Pixel\+Buffer@{image\+\_\+tools\+::\+Pixel\+Buffer}}
+\subsubsection{\texorpdfstring{operator"!=}{operator!=}}
+{\footnotesize\ttfamily bool operator!= (\begin{DoxyParamCaption}\item[{const \hyperlink{classimage__tools_1_1PixelBuffer}{Pixel\+Buffer} \&}]{a,  }\item[{const \hyperlink{classimage__tools_1_1PixelBuffer}{Pixel\+Buffer} \&}]{b }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+Check for \char`\"{}inequality\char`\"{}, taking floating point imprecision into account \mbox{\Hypertarget{classimage__tools_1_1PixelBuffer_a68aef4100a6c7062d102b566dc382543}\label{classimage__tools_1_1PixelBuffer_a68aef4100a6c7062d102b566dc382543}} 
+\index{image\+\_\+tools\+::\+Pixel\+Buffer@{image\+\_\+tools\+::\+Pixel\+Buffer}!operator==@{operator==}}
+\index{operator==@{operator==}!image\+\_\+tools\+::\+Pixel\+Buffer@{image\+\_\+tools\+::\+Pixel\+Buffer}}
+\subsubsection{\texorpdfstring{operator==}{operator==}}
+{\footnotesize\ttfamily bool operator== (\begin{DoxyParamCaption}\item[{const \hyperlink{classimage__tools_1_1PixelBuffer}{Pixel\+Buffer} \&}]{a,  }\item[{const \hyperlink{classimage__tools_1_1PixelBuffer}{Pixel\+Buffer} \&}]{b }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+Check for \char`\"{}equality\char`\"{}, taking floating point imprecision into account 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/imagetools/pixel\+\_\+buffer.\+h\item 
+src/imagetools/pixel\+\_\+buffer.\+cc\end{DoxyCompactItemize}

@@ -1,0 +1,212 @@
+\hypertarget{classimage__tools_1_1ImageEditor}{}\section{image\+\_\+tools\+:\+:Image\+Editor Class Reference}
+\label{classimage__tools_1_1ImageEditor}\index{image\+\_\+tools\+::\+Image\+Editor@{image\+\_\+tools\+::\+Image\+Editor}}
+
+
+{\ttfamily \#include $<$image\+\_\+editor.\+h$>$}
+
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classimage__tools_1_1ImageEditor_a20bacf2756f1b97eed82d2fee9628ac2}\label{classimage__tools_1_1ImageEditor_a20bacf2756f1b97eed82d2fee9628ac2}} 
+enum \hyperlink{classimage__tools_1_1ImageEditor_a20bacf2756f1b97eed82d2fee9628ac2}{M\+Blur\+Dir} \{ {\bfseries M\+B\+L\+U\+R\+\_\+\+D\+I\+R\+\_\+\+N\+\_\+S}, 
+{\bfseries M\+B\+L\+U\+R\+\_\+\+D\+I\+R\+\_\+\+E\+\_\+W}, 
+{\bfseries M\+B\+L\+U\+R\+\_\+\+D\+I\+R\+\_\+\+N\+E\+\_\+\+SW}, 
+{\bfseries M\+B\+L\+U\+R\+\_\+\+D\+I\+R\+\_\+\+N\+W\+\_\+\+SE}
+ \}\begin{DoxyCompactList}\small\item\em Four possible motion blur directions are supported. \end{DoxyCompactList}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classimage__tools_1_1ImageEditor_ae2c556649a8961a0ff7caf5058a6c12c}{Image\+Editor} (\hyperlink{classimage__tools_1_1PixelBuffer}{Pixel\+Buffer} $\ast$buffer)
+\item 
+\hyperlink{classimage__tools_1_1ImageEditor_a7665987647451a161e28b918436d0d10}{Image\+Editor} ()
+\item 
+virtual \hyperlink{classimage__tools_1_1ImageEditor_ad3a824c648aee5889643207960d600d5}{$\sim$\+Image\+Editor} ()
+\item 
+void \hyperlink{classimage__tools_1_1ImageEditor_a2eadb26d997e0a8b03c30b6181215b87}{Load\+From\+File} (const std\+::string \&filename)
+\item 
+void \hyperlink{classimage__tools_1_1ImageEditor_a9a99dba9070acc0cfe40b33e052a497e}{Save\+To\+File} (const std\+::string \&filename)
+\item 
+\mbox{\Hypertarget{classimage__tools_1_1ImageEditor_a031831a77dc2b9728938000077be1d80}\label{classimage__tools_1_1ImageEditor_a031831a77dc2b9728938000077be1d80}} 
+\hyperlink{classimage__tools_1_1Tool}{Tool} $\ast$ {\bfseries Get\+Tool\+By\+Name} (const std\+::string \&name)
+\item 
+void \hyperlink{classimage__tools_1_1ImageEditor_a396d6b86c6d740714f4311737a40e19c}{Start\+Stroke} (const std\+::string \&tool\+\_\+name, const \hyperlink{classimage__tools_1_1ColorData}{Color\+Data} \&color, float radius, int x, int y)
+\item 
+void \hyperlink{classimage__tools_1_1ImageEditor_ab3e3fdaa5a72bfb4a8004bd151c97921}{Add\+To\+Stroke} (int x, int y)
+\item 
+void \hyperlink{classimage__tools_1_1ImageEditor_a14b562aac1107fec7f28a53fe44f2550}{End\+Stroke} (int x, int y)
+\item 
+void \hyperlink{classimage__tools_1_1ImageEditor_a4d610808946e2125d0ac1a702ec88f77}{Apply\+Blur\+Filter} (float radius)
+\item 
+void \hyperlink{classimage__tools_1_1ImageEditor_aaf09cb82f92d3d78583b631ac2ca2809}{Apply\+Motion\+Blur\+Filter} (float radius, \hyperlink{classimage__tools_1_1ImageEditor_a20bacf2756f1b97eed82d2fee9628ac2}{M\+Blur\+Dir} dir)
+\item 
+void \hyperlink{classimage__tools_1_1ImageEditor_a7b3c650d9caa4795fb5decc03969320d}{Apply\+Sharpen\+Filter} (float radius)
+\item 
+void \hyperlink{classimage__tools_1_1ImageEditor_a8fd57eb520b53b60d9ed3c06fdef3311}{Apply\+Edge\+Detect\+Filter} ()
+\item 
+void \hyperlink{classimage__tools_1_1ImageEditor_af370ba9fbed2d3a39c5175bd26250042}{Apply\+Threshold\+Filter} (float cutoff\+\_\+value)
+\item 
+void \hyperlink{classimage__tools_1_1ImageEditor_ae63df2a76403031054f608a60f5c87d3}{Apply\+Saturate\+Filter} (float scale\+\_\+factor)
+\item 
+void \hyperlink{classimage__tools_1_1ImageEditor_ad0cc13d670d3e4d96ff79796568fd9a6}{Apply\+Channels\+Filter} (float red\+\_\+scale, float green\+\_\+scale, float blue\+\_\+scale)
+\item 
+void \hyperlink{classimage__tools_1_1ImageEditor_af7f5752ea941a7909f0274a6e60032ee}{Apply\+Quantize\+Filter} (int num\+\_\+bins)
+\item 
+void \hyperlink{classimage__tools_1_1ImageEditor_a68b451ce2df352889281e5b4afd6df19}{Undo} ()
+\item 
+void \hyperlink{classimage__tools_1_1ImageEditor_adc595320db962da732b9fb8c752d5286}{Redo} ()
+\item 
+bool \hyperlink{classimage__tools_1_1ImageEditor_aeed8d58a2f7b08507b8c14a07b1774a8}{can\+\_\+undo} ()
+\item 
+bool \hyperlink{classimage__tools_1_1ImageEditor_a10d85c58555947ec7644e6f6184ee041}{can\+\_\+redo} ()
+\item 
+\mbox{\Hypertarget{classimage__tools_1_1ImageEditor_a55580abfe8f90a536e62b7006472e01f}\label{classimage__tools_1_1ImageEditor_a55580abfe8f90a536e62b7006472e01f}} 
+\hyperlink{classimage__tools_1_1PixelBuffer}{Pixel\+Buffer} $\ast$ {\bfseries pixel\+\_\+buffer} ()
+\item 
+\mbox{\Hypertarget{classimage__tools_1_1ImageEditor_ac4fcd5956c5fead72961111f7bee07bd}\label{classimage__tools_1_1ImageEditor_ac4fcd5956c5fead72961111f7bee07bd}} 
+void {\bfseries set\+\_\+pixel\+\_\+buffer} (\hyperlink{classimage__tools_1_1PixelBuffer}{Pixel\+Buffer} $\ast$buffer)
+\item 
+\mbox{\Hypertarget{classimage__tools_1_1ImageEditor_a2794ca9b8b98d1843590452ae7320239}\label{classimage__tools_1_1ImageEditor_a2794ca9b8b98d1843590452ae7320239}} 
+void {\bfseries Public\+Save\+State\+For\+Possible\+Undo} ()
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classimage__tools_1_1ImageEditor_a5307811aac54d3afc2a7489b485d5b6f}\label{classimage__tools_1_1ImageEditor_a5307811aac54d3afc2a7489b485d5b6f}} 
+static std\+::string {\bfseries Motion\+Blur\+Direction\+Name} (\hyperlink{classimage__tools_1_1ImageEditor_a20bacf2756f1b97eed82d2fee9628ac2}{M\+Blur\+Dir} dir)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This is the major class of the Flash\+Photo application. In the model-\/view-\/controller paradigm, we can think of this class as implementing the model for an \hyperlink{classimage__tools_1_1ImageEditor}{Image\+Editor} that could be controlled by various controllers (e.\+g., interactive mouse and keyboard, command line) and viewed different ways (e.\+g., interactively with a G\+UI, with files written to disk). 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classimage__tools_1_1ImageEditor_ae2c556649a8961a0ff7caf5058a6c12c}\label{classimage__tools_1_1ImageEditor_ae2c556649a8961a0ff7caf5058a6c12c}} 
+\index{image\+\_\+tools\+::\+Image\+Editor@{image\+\_\+tools\+::\+Image\+Editor}!Image\+Editor@{Image\+Editor}}
+\index{Image\+Editor@{Image\+Editor}!image\+\_\+tools\+::\+Image\+Editor@{image\+\_\+tools\+::\+Image\+Editor}}
+\subsubsection{\texorpdfstring{Image\+Editor()}{ImageEditor()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily image\+\_\+tools\+::\+Image\+Editor\+::\+Image\+Editor (\begin{DoxyParamCaption}\item[{\hyperlink{classimage__tools_1_1PixelBuffer}{Pixel\+Buffer} $\ast$}]{buffer }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+The \hyperlink{classimage__tools_1_1ImageEditor}{Image\+Editor} requires a current pixel buffer, so this is the preferred constructor. \mbox{\Hypertarget{classimage__tools_1_1ImageEditor_a7665987647451a161e28b918436d0d10}\label{classimage__tools_1_1ImageEditor_a7665987647451a161e28b918436d0d10}} 
+\index{image\+\_\+tools\+::\+Image\+Editor@{image\+\_\+tools\+::\+Image\+Editor}!Image\+Editor@{Image\+Editor}}
+\index{Image\+Editor@{Image\+Editor}!image\+\_\+tools\+::\+Image\+Editor@{image\+\_\+tools\+::\+Image\+Editor}}
+\subsubsection{\texorpdfstring{Image\+Editor()}{ImageEditor()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily image\+\_\+tools\+::\+Image\+Editor\+::\+Image\+Editor (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Creates an editor with a N\+U\+LL pixel buffer. You will need to set the pixel buffer before performing any editing operations. \mbox{\Hypertarget{classimage__tools_1_1ImageEditor_ad3a824c648aee5889643207960d600d5}\label{classimage__tools_1_1ImageEditor_ad3a824c648aee5889643207960d600d5}} 
+\index{image\+\_\+tools\+::\+Image\+Editor@{image\+\_\+tools\+::\+Image\+Editor}!````~Image\+Editor@{$\sim$\+Image\+Editor}}
+\index{````~Image\+Editor@{$\sim$\+Image\+Editor}!image\+\_\+tools\+::\+Image\+Editor@{image\+\_\+tools\+::\+Image\+Editor}}
+\subsubsection{\texorpdfstring{$\sim$\+Image\+Editor()}{~ImageEditor()}}
+{\footnotesize\ttfamily image\+\_\+tools\+::\+Image\+Editor\+::$\sim$\+Image\+Editor (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Deletes the current pixel buffer if not null. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classimage__tools_1_1ImageEditor_ab3e3fdaa5a72bfb4a8004bd151c97921}\label{classimage__tools_1_1ImageEditor_ab3e3fdaa5a72bfb4a8004bd151c97921}} 
+\index{image\+\_\+tools\+::\+Image\+Editor@{image\+\_\+tools\+::\+Image\+Editor}!Add\+To\+Stroke@{Add\+To\+Stroke}}
+\index{Add\+To\+Stroke@{Add\+To\+Stroke}!image\+\_\+tools\+::\+Image\+Editor@{image\+\_\+tools\+::\+Image\+Editor}}
+\subsubsection{\texorpdfstring{Add\+To\+Stroke()}{AddToStroke()}}
+{\footnotesize\ttfamily void image\+\_\+tools\+::\+Image\+Editor\+::\+Add\+To\+Stroke (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{y }\end{DoxyParamCaption})}
+
+Call this from the controller to add to a stroke that was recently started with a call to \hyperlink{classimage__tools_1_1ImageEditor_a396d6b86c6d740714f4311737a40e19c}{Start\+Stroke()}. \mbox{\Hypertarget{classimage__tools_1_1ImageEditor_a4d610808946e2125d0ac1a702ec88f77}\label{classimage__tools_1_1ImageEditor_a4d610808946e2125d0ac1a702ec88f77}} 
+\index{image\+\_\+tools\+::\+Image\+Editor@{image\+\_\+tools\+::\+Image\+Editor}!Apply\+Blur\+Filter@{Apply\+Blur\+Filter}}
+\index{Apply\+Blur\+Filter@{Apply\+Blur\+Filter}!image\+\_\+tools\+::\+Image\+Editor@{image\+\_\+tools\+::\+Image\+Editor}}
+\subsubsection{\texorpdfstring{Apply\+Blur\+Filter()}{ApplyBlurFilter()}}
+{\footnotesize\ttfamily void image\+\_\+tools\+::\+Image\+Editor\+::\+Apply\+Blur\+Filter (\begin{DoxyParamCaption}\item[{float}]{radius }\end{DoxyParamCaption})}
+
+Call this from the controller to apply the blur filter to the current pixel buffer using the current blur filter state. \mbox{\Hypertarget{classimage__tools_1_1ImageEditor_ad0cc13d670d3e4d96ff79796568fd9a6}\label{classimage__tools_1_1ImageEditor_ad0cc13d670d3e4d96ff79796568fd9a6}} 
+\index{image\+\_\+tools\+::\+Image\+Editor@{image\+\_\+tools\+::\+Image\+Editor}!Apply\+Channels\+Filter@{Apply\+Channels\+Filter}}
+\index{Apply\+Channels\+Filter@{Apply\+Channels\+Filter}!image\+\_\+tools\+::\+Image\+Editor@{image\+\_\+tools\+::\+Image\+Editor}}
+\subsubsection{\texorpdfstring{Apply\+Channels\+Filter()}{ApplyChannelsFilter()}}
+{\footnotesize\ttfamily void image\+\_\+tools\+::\+Image\+Editor\+::\+Apply\+Channels\+Filter (\begin{DoxyParamCaption}\item[{float}]{red\+\_\+scale,  }\item[{float}]{green\+\_\+scale,  }\item[{float}]{blue\+\_\+scale }\end{DoxyParamCaption})}
+
+Call this from the controller to apply the channels filter to the current pixel buffer using the current channels filter state. \mbox{\Hypertarget{classimage__tools_1_1ImageEditor_a8fd57eb520b53b60d9ed3c06fdef3311}\label{classimage__tools_1_1ImageEditor_a8fd57eb520b53b60d9ed3c06fdef3311}} 
+\index{image\+\_\+tools\+::\+Image\+Editor@{image\+\_\+tools\+::\+Image\+Editor}!Apply\+Edge\+Detect\+Filter@{Apply\+Edge\+Detect\+Filter}}
+\index{Apply\+Edge\+Detect\+Filter@{Apply\+Edge\+Detect\+Filter}!image\+\_\+tools\+::\+Image\+Editor@{image\+\_\+tools\+::\+Image\+Editor}}
+\subsubsection{\texorpdfstring{Apply\+Edge\+Detect\+Filter()}{ApplyEdgeDetectFilter()}}
+{\footnotesize\ttfamily void image\+\_\+tools\+::\+Image\+Editor\+::\+Apply\+Edge\+Detect\+Filter (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Call this from the controller to apply the edge detect filter to the current pixel buffer using the current edge detect filter state. \mbox{\Hypertarget{classimage__tools_1_1ImageEditor_aaf09cb82f92d3d78583b631ac2ca2809}\label{classimage__tools_1_1ImageEditor_aaf09cb82f92d3d78583b631ac2ca2809}} 
+\index{image\+\_\+tools\+::\+Image\+Editor@{image\+\_\+tools\+::\+Image\+Editor}!Apply\+Motion\+Blur\+Filter@{Apply\+Motion\+Blur\+Filter}}
+\index{Apply\+Motion\+Blur\+Filter@{Apply\+Motion\+Blur\+Filter}!image\+\_\+tools\+::\+Image\+Editor@{image\+\_\+tools\+::\+Image\+Editor}}
+\subsubsection{\texorpdfstring{Apply\+Motion\+Blur\+Filter()}{ApplyMotionBlurFilter()}}
+{\footnotesize\ttfamily void image\+\_\+tools\+::\+Image\+Editor\+::\+Apply\+Motion\+Blur\+Filter (\begin{DoxyParamCaption}\item[{float}]{radius,  }\item[{\hyperlink{classimage__tools_1_1ImageEditor_a20bacf2756f1b97eed82d2fee9628ac2}{M\+Blur\+Dir}}]{dir }\end{DoxyParamCaption})}
+
+Call this from the controller to apply the filter to the current pixel buffer using the current motion blur filter state. \mbox{\Hypertarget{classimage__tools_1_1ImageEditor_af7f5752ea941a7909f0274a6e60032ee}\label{classimage__tools_1_1ImageEditor_af7f5752ea941a7909f0274a6e60032ee}} 
+\index{image\+\_\+tools\+::\+Image\+Editor@{image\+\_\+tools\+::\+Image\+Editor}!Apply\+Quantize\+Filter@{Apply\+Quantize\+Filter}}
+\index{Apply\+Quantize\+Filter@{Apply\+Quantize\+Filter}!image\+\_\+tools\+::\+Image\+Editor@{image\+\_\+tools\+::\+Image\+Editor}}
+\subsubsection{\texorpdfstring{Apply\+Quantize\+Filter()}{ApplyQuantizeFilter()}}
+{\footnotesize\ttfamily void image\+\_\+tools\+::\+Image\+Editor\+::\+Apply\+Quantize\+Filter (\begin{DoxyParamCaption}\item[{int}]{num\+\_\+bins }\end{DoxyParamCaption})}
+
+Call this from the controller to apply the quantize filter to the current pixel buffer using the current quantize filter state. \mbox{\Hypertarget{classimage__tools_1_1ImageEditor_ae63df2a76403031054f608a60f5c87d3}\label{classimage__tools_1_1ImageEditor_ae63df2a76403031054f608a60f5c87d3}} 
+\index{image\+\_\+tools\+::\+Image\+Editor@{image\+\_\+tools\+::\+Image\+Editor}!Apply\+Saturate\+Filter@{Apply\+Saturate\+Filter}}
+\index{Apply\+Saturate\+Filter@{Apply\+Saturate\+Filter}!image\+\_\+tools\+::\+Image\+Editor@{image\+\_\+tools\+::\+Image\+Editor}}
+\subsubsection{\texorpdfstring{Apply\+Saturate\+Filter()}{ApplySaturateFilter()}}
+{\footnotesize\ttfamily void image\+\_\+tools\+::\+Image\+Editor\+::\+Apply\+Saturate\+Filter (\begin{DoxyParamCaption}\item[{float}]{scale\+\_\+factor }\end{DoxyParamCaption})}
+
+Call this from the controller to apply the saturate filter to the current pixel buffer using the current saturate filter state. \mbox{\Hypertarget{classimage__tools_1_1ImageEditor_a7b3c650d9caa4795fb5decc03969320d}\label{classimage__tools_1_1ImageEditor_a7b3c650d9caa4795fb5decc03969320d}} 
+\index{image\+\_\+tools\+::\+Image\+Editor@{image\+\_\+tools\+::\+Image\+Editor}!Apply\+Sharpen\+Filter@{Apply\+Sharpen\+Filter}}
+\index{Apply\+Sharpen\+Filter@{Apply\+Sharpen\+Filter}!image\+\_\+tools\+::\+Image\+Editor@{image\+\_\+tools\+::\+Image\+Editor}}
+\subsubsection{\texorpdfstring{Apply\+Sharpen\+Filter()}{ApplySharpenFilter()}}
+{\footnotesize\ttfamily void image\+\_\+tools\+::\+Image\+Editor\+::\+Apply\+Sharpen\+Filter (\begin{DoxyParamCaption}\item[{float}]{radius }\end{DoxyParamCaption})}
+
+Call this from the controller to apply the sharpen filter to the current pixel buffer using the current sharpen filter state. \mbox{\Hypertarget{classimage__tools_1_1ImageEditor_af370ba9fbed2d3a39c5175bd26250042}\label{classimage__tools_1_1ImageEditor_af370ba9fbed2d3a39c5175bd26250042}} 
+\index{image\+\_\+tools\+::\+Image\+Editor@{image\+\_\+tools\+::\+Image\+Editor}!Apply\+Threshold\+Filter@{Apply\+Threshold\+Filter}}
+\index{Apply\+Threshold\+Filter@{Apply\+Threshold\+Filter}!image\+\_\+tools\+::\+Image\+Editor@{image\+\_\+tools\+::\+Image\+Editor}}
+\subsubsection{\texorpdfstring{Apply\+Threshold\+Filter()}{ApplyThresholdFilter()}}
+{\footnotesize\ttfamily void image\+\_\+tools\+::\+Image\+Editor\+::\+Apply\+Threshold\+Filter (\begin{DoxyParamCaption}\item[{float}]{cutoff\+\_\+value }\end{DoxyParamCaption})}
+
+Call this from the controller to apply the threshold filter to the current pixel buffer using the current threshold filter state. \mbox{\Hypertarget{classimage__tools_1_1ImageEditor_a10d85c58555947ec7644e6f6184ee041}\label{classimage__tools_1_1ImageEditor_a10d85c58555947ec7644e6f6184ee041}} 
+\index{image\+\_\+tools\+::\+Image\+Editor@{image\+\_\+tools\+::\+Image\+Editor}!can\+\_\+redo@{can\+\_\+redo}}
+\index{can\+\_\+redo@{can\+\_\+redo}!image\+\_\+tools\+::\+Image\+Editor@{image\+\_\+tools\+::\+Image\+Editor}}
+\subsubsection{\texorpdfstring{can\+\_\+redo()}{can\_redo()}}
+{\footnotesize\ttfamily bool image\+\_\+tools\+::\+Image\+Editor\+::can\+\_\+redo (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+True if the log of undone commands is not empty, i.\+e., it is possible to perform a redo operation. \mbox{\Hypertarget{classimage__tools_1_1ImageEditor_aeed8d58a2f7b08507b8c14a07b1774a8}\label{classimage__tools_1_1ImageEditor_aeed8d58a2f7b08507b8c14a07b1774a8}} 
+\index{image\+\_\+tools\+::\+Image\+Editor@{image\+\_\+tools\+::\+Image\+Editor}!can\+\_\+undo@{can\+\_\+undo}}
+\index{can\+\_\+undo@{can\+\_\+undo}!image\+\_\+tools\+::\+Image\+Editor@{image\+\_\+tools\+::\+Image\+Editor}}
+\subsubsection{\texorpdfstring{can\+\_\+undo()}{can\_undo()}}
+{\footnotesize\ttfamily bool image\+\_\+tools\+::\+Image\+Editor\+::can\+\_\+undo (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+True if the the log of applied commands is not empty, i.\+e., it is possible to perform an undo operation. \mbox{\Hypertarget{classimage__tools_1_1ImageEditor_a14b562aac1107fec7f28a53fe44f2550}\label{classimage__tools_1_1ImageEditor_a14b562aac1107fec7f28a53fe44f2550}} 
+\index{image\+\_\+tools\+::\+Image\+Editor@{image\+\_\+tools\+::\+Image\+Editor}!End\+Stroke@{End\+Stroke}}
+\index{End\+Stroke@{End\+Stroke}!image\+\_\+tools\+::\+Image\+Editor@{image\+\_\+tools\+::\+Image\+Editor}}
+\subsubsection{\texorpdfstring{End\+Stroke()}{EndStroke()}}
+{\footnotesize\ttfamily void image\+\_\+tools\+::\+Image\+Editor\+::\+End\+Stroke (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{y }\end{DoxyParamCaption})}
+
+Call this from the controller to end a stroke started with \hyperlink{classimage__tools_1_1ImageEditor_a396d6b86c6d740714f4311737a40e19c}{Start\+Stroke()}. \mbox{\Hypertarget{classimage__tools_1_1ImageEditor_a2eadb26d997e0a8b03c30b6181215b87}\label{classimage__tools_1_1ImageEditor_a2eadb26d997e0a8b03c30b6181215b87}} 
+\index{image\+\_\+tools\+::\+Image\+Editor@{image\+\_\+tools\+::\+Image\+Editor}!Load\+From\+File@{Load\+From\+File}}
+\index{Load\+From\+File@{Load\+From\+File}!image\+\_\+tools\+::\+Image\+Editor@{image\+\_\+tools\+::\+Image\+Editor}}
+\subsubsection{\texorpdfstring{Load\+From\+File()}{LoadFromFile()}}
+{\footnotesize\ttfamily void image\+\_\+tools\+::\+Image\+Editor\+::\+Load\+From\+File (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{filename }\end{DoxyParamCaption})}
+
+Loads a pixel buffer from a P\+NG formatted file. \mbox{\Hypertarget{classimage__tools_1_1ImageEditor_adc595320db962da732b9fb8c752d5286}\label{classimage__tools_1_1ImageEditor_adc595320db962da732b9fb8c752d5286}} 
+\index{image\+\_\+tools\+::\+Image\+Editor@{image\+\_\+tools\+::\+Image\+Editor}!Redo@{Redo}}
+\index{Redo@{Redo}!image\+\_\+tools\+::\+Image\+Editor@{image\+\_\+tools\+::\+Image\+Editor}}
+\subsubsection{\texorpdfstring{Redo()}{Redo()}}
+{\footnotesize\ttfamily void image\+\_\+tools\+::\+Image\+Editor\+::\+Redo (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Redo the last undone operation. \mbox{\Hypertarget{classimage__tools_1_1ImageEditor_a9a99dba9070acc0cfe40b33e052a497e}\label{classimage__tools_1_1ImageEditor_a9a99dba9070acc0cfe40b33e052a497e}} 
+\index{image\+\_\+tools\+::\+Image\+Editor@{image\+\_\+tools\+::\+Image\+Editor}!Save\+To\+File@{Save\+To\+File}}
+\index{Save\+To\+File@{Save\+To\+File}!image\+\_\+tools\+::\+Image\+Editor@{image\+\_\+tools\+::\+Image\+Editor}}
+\subsubsection{\texorpdfstring{Save\+To\+File()}{SaveToFile()}}
+{\footnotesize\ttfamily void image\+\_\+tools\+::\+Image\+Editor\+::\+Save\+To\+File (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{filename }\end{DoxyParamCaption})}
+
+Saves the current pixel buffer to a P\+NG file. \mbox{\Hypertarget{classimage__tools_1_1ImageEditor_a396d6b86c6d740714f4311737a40e19c}\label{classimage__tools_1_1ImageEditor_a396d6b86c6d740714f4311737a40e19c}} 
+\index{image\+\_\+tools\+::\+Image\+Editor@{image\+\_\+tools\+::\+Image\+Editor}!Start\+Stroke@{Start\+Stroke}}
+\index{Start\+Stroke@{Start\+Stroke}!image\+\_\+tools\+::\+Image\+Editor@{image\+\_\+tools\+::\+Image\+Editor}}
+\subsubsection{\texorpdfstring{Start\+Stroke()}{StartStroke()}}
+{\footnotesize\ttfamily void image\+\_\+tools\+::\+Image\+Editor\+::\+Start\+Stroke (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{tool\+\_\+name,  }\item[{const \hyperlink{classimage__tools_1_1ColorData}{Color\+Data} \&}]{color,  }\item[{float}]{radius,  }\item[{int}]{x,  }\item[{int}]{y }\end{DoxyParamCaption})}
+
+Call this from the controller to being a new stroke at pixel (x,y) using the tool named tool\+\_\+name and the specified color and radius. Since it takes multiple frames to complete a stroke the tool\+\_\+name, color, and radius are saved as state variables and are used for subsequent calls to \hyperlink{classimage__tools_1_1ImageEditor_ab3e3fdaa5a72bfb4a8004bd151c97921}{Add\+To\+Stroke()} and \hyperlink{classimage__tools_1_1ImageEditor_a14b562aac1107fec7f28a53fe44f2550}{End\+Stroke()}. \mbox{\Hypertarget{classimage__tools_1_1ImageEditor_a68b451ce2df352889281e5b4afd6df19}\label{classimage__tools_1_1ImageEditor_a68b451ce2df352889281e5b4afd6df19}} 
+\index{image\+\_\+tools\+::\+Image\+Editor@{image\+\_\+tools\+::\+Image\+Editor}!Undo@{Undo}}
+\index{Undo@{Undo}!image\+\_\+tools\+::\+Image\+Editor@{image\+\_\+tools\+::\+Image\+Editor}}
+\subsubsection{\texorpdfstring{Undo()}{Undo()}}
+{\footnotesize\ttfamily void image\+\_\+tools\+::\+Image\+Editor\+::\+Undo (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Undo the last operation applied to the pixel buffer. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/imagetools/image\+\_\+editor.\+h\item 
+src/imagetools/image\+\_\+editor.\+cc\end{DoxyCompactItemize}

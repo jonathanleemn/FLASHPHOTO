@@ -1,0 +1,77 @@
+\hypertarget{classimage__tools_1_1ToolBlur}{}\section{image\+\_\+tools\+:\+:Tool\+Blur Class Reference}
+\label{classimage__tools_1_1ToolBlur}\index{image\+\_\+tools\+::\+Tool\+Blur@{image\+\_\+tools\+::\+Tool\+Blur}}
+
+
+This tool serves as a mobile version of the blur filter, functions much like the spray can, except with blurring neighboring pixels rather than coloring them (linear falloff).  
+
+
+
+
+{\ttfamily \#include $<$tool\+\_\+blur.\+h$>$}
+
+
+
+Inheritance diagram for image\+\_\+tools\+:\+:Tool\+Blur\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=191pt]{classimage__tools_1_1ToolBlur__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for image\+\_\+tools\+:\+:Tool\+Blur\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classimage__tools_1_1ToolBlur__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classimage__tools_1_1FloatMatrix}{Float\+Matrix} $\ast$ \hyperlink{classimage__tools_1_1ToolBlur_a75690cef3c70c2f8db56b7106d7cd08c}{Create\+Mask} (float radius) override
+\item 
+\hyperlink{classimage__tools_1_1ColorData}{Color\+Data} \hyperlink{classimage__tools_1_1ToolBlur_af709da063f86da74d878d079fd2aab5e}{Lookup\+Paint\+Color} (int x, int y) override
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classimage__tools_1_1ToolBlur_a8faee980a676d32430a6e7440e929ce6}\label{classimage__tools_1_1ToolBlur_a8faee980a676d32430a6e7440e929ce6}} 
+static const std\+::string {\bfseries name} ()
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+This tool serves as a mobile version of the blur filter, functions much like the spray can, except with blurring neighboring pixels rather than coloring them (linear falloff). 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classimage__tools_1_1ToolBlur_a75690cef3c70c2f8db56b7106d7cd08c}\label{classimage__tools_1_1ToolBlur_a75690cef3c70c2f8db56b7106d7cd08c}} 
+\index{image\+\_\+tools\+::\+Tool\+Blur@{image\+\_\+tools\+::\+Tool\+Blur}!Create\+Mask@{Create\+Mask}}
+\index{Create\+Mask@{Create\+Mask}!image\+\_\+tools\+::\+Tool\+Blur@{image\+\_\+tools\+::\+Tool\+Blur}}
+\subsubsection{\texorpdfstring{Create\+Mask()}{CreateMask()}}
+{\footnotesize\ttfamily \hyperlink{classimage__tools_1_1FloatMatrix}{Float\+Matrix} $\ast$ image\+\_\+tools\+::\+Tool\+Blur\+::\+Create\+Mask (\begin{DoxyParamCaption}\item[{float}]{radius }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Subclasses must fill in this factory method to define the mask for the specific tool they implement. 
+
+Implements \hyperlink{classimage__tools_1_1Tool_a7d58325846dbc0467e52221daa1310a7}{image\+\_\+tools\+::\+Tool}.
+
+\mbox{\Hypertarget{classimage__tools_1_1ToolBlur_af709da063f86da74d878d079fd2aab5e}\label{classimage__tools_1_1ToolBlur_af709da063f86da74d878d079fd2aab5e}} 
+\index{image\+\_\+tools\+::\+Tool\+Blur@{image\+\_\+tools\+::\+Tool\+Blur}!Lookup\+Paint\+Color@{Lookup\+Paint\+Color}}
+\index{Lookup\+Paint\+Color@{Lookup\+Paint\+Color}!image\+\_\+tools\+::\+Tool\+Blur@{image\+\_\+tools\+::\+Tool\+Blur}}
+\subsubsection{\texorpdfstring{Lookup\+Paint\+Color()}{LookupPaintColor()}}
+{\footnotesize\ttfamily \hyperlink{classimage__tools_1_1ColorData}{Color\+Data} image\+\_\+tools\+::\+Tool\+Blur\+::\+Lookup\+Paint\+Color (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{y }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+This function returns the current paint color used with the tool. In most cases, this is the same as the paint\+\_\+color passed in to the \hyperlink{classimage__tools_1_1Tool_a1b7cd7d59588923d7e29b6150334f5b8}{Start\+Stroke()} function. However, some tools, like the blur tool, have \char`\"{}special paint\char`\"{} that depends on the underlying pixels in the canvas or some other factors. Thus, this function provides a hook for subclasses to override the default paint color to implement special paint colors. 
+
+Reimplemented from \hyperlink{classimage__tools_1_1Tool_aaf72d26377a6563fe9002e3288933285}{image\+\_\+tools\+::\+Tool}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/imagetools/tool\+\_\+blur.\+h\item 
+src/imagetools/tool\+\_\+blur.\+cc\end{DoxyCompactItemize}

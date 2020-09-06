@@ -1,0 +1,65 @@
+\hypertarget{classimage__tools_1_1FloatMatrix}{}\section{image\+\_\+tools\+:\+:Float\+Matrix Class Reference}
+\label{classimage__tools_1_1FloatMatrix}\index{image\+\_\+tools\+::\+Float\+Matrix@{image\+\_\+tools\+::\+Float\+Matrix}}
+
+
+{\ttfamily \#include $<$float\+\_\+matrix.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classimage__tools_1_1FloatMatrix_a8d7d1e54d9234af0628af1e291b3196e}\label{classimage__tools_1_1FloatMatrix_a8d7d1e54d9234af0628af1e291b3196e}} 
+\hyperlink{classimage__tools_1_1FloatMatrix_a8d7d1e54d9234af0628af1e291b3196e}{Float\+Matrix} ()
+\begin{DoxyCompactList}\small\item\em Creates a 1 by 1 matrix that stores a 1.\+0. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classimage__tools_1_1FloatMatrix_aab08d9de439a8ce50465cb80019f1ca2}\label{classimage__tools_1_1FloatMatrix_aab08d9de439a8ce50465cb80019f1ca2}} 
+\hyperlink{classimage__tools_1_1FloatMatrix_aab08d9de439a8ce50465cb80019f1ca2}{Float\+Matrix} (int radius)
+\begin{DoxyCompactList}\small\item\em Creates a 2$\ast$radius+1 by 2$\ast$radius+1 matrix with 1.\+0 in each element. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classimage__tools_1_1FloatMatrix_a98708d33731113bdd36d59698ff77418}\label{classimage__tools_1_1FloatMatrix_a98708d33731113bdd36d59698ff77418}} 
+\hyperlink{classimage__tools_1_1FloatMatrix_a98708d33731113bdd36d59698ff77418}{Float\+Matrix} (int w, int h)
+\begin{DoxyCompactList}\small\item\em Creates a w by h matrix with 1.\+0 in each element. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classimage__tools_1_1FloatMatrix_a34f7a09d3703aafb012a1e0bbb1803f0}\label{classimage__tools_1_1FloatMatrix_a34f7a09d3703aafb012a1e0bbb1803f0}} 
+float \hyperlink{classimage__tools_1_1FloatMatrix_a34f7a09d3703aafb012a1e0bbb1803f0}{Sum} ()
+\begin{DoxyCompactList}\small\item\em Get the sum total of all elements of the matrix. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classimage__tools_1_1FloatMatrix_ad638ab60a162b1e1a6afdc377b5a7430}\label{classimage__tools_1_1FloatMatrix_ad638ab60a162b1e1a6afdc377b5a7430}} 
+void \hyperlink{classimage__tools_1_1FloatMatrix_ad638ab60a162b1e1a6afdc377b5a7430}{Normalize} ()
+\begin{DoxyCompactList}\small\item\em \char`\"{}\+Normalize\char`\"{} the matrix by dividing each element by the sum. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classimage__tools_1_1FloatMatrix_a7813f1a7ab6ae97530e18311427bc2fb}\label{classimage__tools_1_1FloatMatrix_a7813f1a7ab6ae97530e18311427bc2fb}} 
+void \hyperlink{classimage__tools_1_1FloatMatrix_a7813f1a7ab6ae97530e18311427bc2fb}{Scale} (const float c)
+\begin{DoxyCompactList}\small\item\em Multiply every element in \hyperlink{classimage__tools_1_1FloatMatrix}{Float\+Matrix} by a constant. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classimage__tools_1_1FloatMatrix_ae56c177031c5a2506fdc63f08705110e}\label{classimage__tools_1_1FloatMatrix_ae56c177031c5a2506fdc63f08705110e}} 
+float const  $\ast$ \hyperlink{classimage__tools_1_1FloatMatrix_ae56c177031c5a2506fdc63f08705110e}{float\+\_\+array} () const
+\begin{DoxyCompactList}\small\item\em Provides access to the raw float array. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classimage__tools_1_1FloatMatrix_a8e6321d90b24d9e4cbf01240d2fd9b88}\label{classimage__tools_1_1FloatMatrix_a8e6321d90b24d9e4cbf01240d2fd9b88}} 
+int \hyperlink{classimage__tools_1_1FloatMatrix_a8e6321d90b24d9e4cbf01240d2fd9b88}{width} () const
+\begin{DoxyCompactList}\small\item\em Get the width of the 2D float matrix. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classimage__tools_1_1FloatMatrix_aebac6742a9a1e536f781b54fd8f1182b}\label{classimage__tools_1_1FloatMatrix_aebac6742a9a1e536f781b54fd8f1182b}} 
+int \hyperlink{classimage__tools_1_1FloatMatrix_aebac6742a9a1e536f781b54fd8f1182b}{height} () const
+\begin{DoxyCompactList}\small\item\em Get the height of the 2D float matrix. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classimage__tools_1_1FloatMatrix_ab22e1ac2436eec5a5ac6a9c21b0e2a2d}\label{classimage__tools_1_1FloatMatrix_ab22e1ac2436eec5a5ac6a9c21b0e2a2d}} 
+virtual float \hyperlink{classimage__tools_1_1FloatMatrix_ab22e1ac2436eec5a5ac6a9c21b0e2a2d}{value} (int x, int y) const
+\begin{DoxyCompactList}\small\item\em Get the value of a specific element. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classimage__tools_1_1FloatMatrix_a947b60843883d934b48848c438cfa1fe}\label{classimage__tools_1_1FloatMatrix_a947b60843883d934b48848c438cfa1fe}} 
+void \hyperlink{classimage__tools_1_1FloatMatrix_a947b60843883d934b48848c438cfa1fe}{set\+\_\+value} (int x, int y, float v)
+\begin{DoxyCompactList}\small\item\em Set the value of an element (x,y) of the float matrix. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+std\+::ostream \& \hyperlink{classimage__tools_1_1FloatMatrix_aa20d6a194db78bcaf737647f7c89baee}{operator$<$$<$} (std\+::ostream \&s, const \hyperlink{classimage__tools_1_1FloatMatrix}{Float\+Matrix} \&mat)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This class holds a 2D array of floats that can be accessed by (row,column). It also includes a number of utility functions for working with the array, such as normalizing it or multiplying every element by some scale factor. 
+
+\subsection{Friends And Related Function Documentation}
+\mbox{\Hypertarget{classimage__tools_1_1FloatMatrix_aa20d6a194db78bcaf737647f7c89baee}\label{classimage__tools_1_1FloatMatrix_aa20d6a194db78bcaf737647f7c89baee}} 
+\index{image\+\_\+tools\+::\+Float\+Matrix@{image\+\_\+tools\+::\+Float\+Matrix}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!image\+\_\+tools\+::\+Float\+Matrix@{image\+\_\+tools\+::\+Float\+Matrix}}
+\subsubsection{\texorpdfstring{operator$<$$<$}{operator<<}}
+{\footnotesize\ttfamily std\+::ostream\& operator$<$$<$ (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{s,  }\item[{const \hyperlink{classimage__tools_1_1FloatMatrix}{Float\+Matrix} \&}]{mat }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+The ostream operator is overloaded to make printing the matrix easy for debugging. Just send the matrix to std\+::cout. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/imagetools/float\+\_\+matrix.\+h\item 
+src/imagetools/float\+\_\+matrix.\+cc\end{DoxyCompactItemize}

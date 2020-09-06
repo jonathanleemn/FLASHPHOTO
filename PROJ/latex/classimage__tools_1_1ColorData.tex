@@ -1,0 +1,90 @@
+\hypertarget{classimage__tools_1_1ColorData}{}\section{image\+\_\+tools\+:\+:Color\+Data Class Reference}
+\label{classimage__tools_1_1ColorData}\index{image\+\_\+tools\+::\+Color\+Data@{image\+\_\+tools\+::\+Color\+Data}}
+
+
+This color data class stores color in floating point format. The Red, Green, Blue, and Alpha channels range from 0.\+0 to 1.\+0.  
+
+
+
+
+{\ttfamily \#include $<$color\+\_\+data.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classimage__tools_1_1ColorData_ad64a66f681d0e502c2416e0bfcb86d14}\label{classimage__tools_1_1ColorData_ad64a66f681d0e502c2416e0bfcb86d14}} 
+{\bfseries Color\+Data} (float r, float g, float b)
+\item 
+\mbox{\Hypertarget{classimage__tools_1_1ColorData_a20782ba5f82e73e731b87311da1bcd56}\label{classimage__tools_1_1ColorData_a20782ba5f82e73e731b87311da1bcd56}} 
+{\bfseries Color\+Data} (float r, float g, float b, float a)
+\item 
+\mbox{\Hypertarget{classimage__tools_1_1ColorData_ad920899b7064bec8d8f252d8bf4d7cf9}\label{classimage__tools_1_1ColorData_ad920899b7064bec8d8f252d8bf4d7cf9}} 
+float {\bfseries red} () const
+\item 
+\mbox{\Hypertarget{classimage__tools_1_1ColorData_a7848c06faf7797998cb83df818d6ab48}\label{classimage__tools_1_1ColorData_a7848c06faf7797998cb83df818d6ab48}} 
+void {\bfseries set\+\_\+red} (float r)
+\item 
+\mbox{\Hypertarget{classimage__tools_1_1ColorData_aa26733d8617bc9033c0444db6b046fc3}\label{classimage__tools_1_1ColorData_aa26733d8617bc9033c0444db6b046fc3}} 
+float {\bfseries green} () const
+\item 
+\mbox{\Hypertarget{classimage__tools_1_1ColorData_aae91ca399cd24ed86b15cf0d0b872786}\label{classimage__tools_1_1ColorData_aae91ca399cd24ed86b15cf0d0b872786}} 
+void {\bfseries set\+\_\+green} (float g)
+\item 
+\mbox{\Hypertarget{classimage__tools_1_1ColorData_a9b1d04ed2d00ff017968bb43cf7b8075}\label{classimage__tools_1_1ColorData_a9b1d04ed2d00ff017968bb43cf7b8075}} 
+float {\bfseries blue} () const
+\item 
+\mbox{\Hypertarget{classimage__tools_1_1ColorData_a97913efb23816200ba2de45f9123d962}\label{classimage__tools_1_1ColorData_a97913efb23816200ba2de45f9123d962}} 
+void {\bfseries set\+\_\+blue} (float b)
+\item 
+\mbox{\Hypertarget{classimage__tools_1_1ColorData_a0f191463c70539bd414c38fc6e6db2b4}\label{classimage__tools_1_1ColorData_a0f191463c70539bd414c38fc6e6db2b4}} 
+float {\bfseries alpha} () const
+\item 
+\mbox{\Hypertarget{classimage__tools_1_1ColorData_a4fe0c6683e81df186df950bf3a43d220}\label{classimage__tools_1_1ColorData_a4fe0c6683e81df186df950bf3a43d220}} 
+void {\bfseries set\+\_\+alpha} (float a)
+\item 
+\mbox{\Hypertarget{classimage__tools_1_1ColorData_ac36f32461a63c77c0fdf99296e1d1faf}\label{classimage__tools_1_1ColorData_ac36f32461a63c77c0fdf99296e1d1faf}} 
+float \hyperlink{classimage__tools_1_1ColorData_ac36f32461a63c77c0fdf99296e1d1faf}{Luminance} () const
+\begin{DoxyCompactList}\small\item\em Calculates the \char`\"{}brightness\char`\"{} of the color according to a perceptual metric that weights the red, green, and blue components of the color non-\/uniformly to account for the non-\/uniformity of the human visual system. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classimage__tools_1_1ColorData_ae64129037eb8de589e8de9dbc45704a8}\label{classimage__tools_1_1ColorData_ae64129037eb8de589e8de9dbc45704a8}} 
+void \hyperlink{classimage__tools_1_1ColorData_ae64129037eb8de589e8de9dbc45704a8}{Clamp} ()
+\begin{DoxyCompactList}\small\item\em Clamps each channel of the color so that the data are within the range \mbox{[}0.\+0,1.\+0\mbox{]}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classimage__tools_1_1ColorData_adf9a770243996e50282d248a4327f351}\label{classimage__tools_1_1ColorData_adf9a770243996e50282d248a4327f351}} 
+\hyperlink{classimage__tools_1_1ColorData}{Color\+Data} {\bfseries operator$\ast$} (const \hyperlink{classimage__tools_1_1ColorData}{Color\+Data} \&a, float f)
+\item 
+\mbox{\Hypertarget{classimage__tools_1_1ColorData_afee00faf26189979b72f3854a17200ae}\label{classimage__tools_1_1ColorData_afee00faf26189979b72f3854a17200ae}} 
+\hyperlink{classimage__tools_1_1ColorData}{Color\+Data} {\bfseries operator+} (const \hyperlink{classimage__tools_1_1ColorData}{Color\+Data} \&a, const \hyperlink{classimage__tools_1_1ColorData}{Color\+Data} \&b)
+\item 
+\mbox{\Hypertarget{classimage__tools_1_1ColorData_a799bd54f65a61569b5b968062ac0d37e}\label{classimage__tools_1_1ColorData_a799bd54f65a61569b5b968062ac0d37e}} 
+\hyperlink{classimage__tools_1_1ColorData}{Color\+Data} {\bfseries operator-\/} (const \hyperlink{classimage__tools_1_1ColorData}{Color\+Data} \&a, const \hyperlink{classimage__tools_1_1ColorData}{Color\+Data} \&b)
+\item 
+bool \hyperlink{classimage__tools_1_1ColorData_a9dae9e77610393d100312c9d248f09cc}{operator==} (const \hyperlink{classimage__tools_1_1ColorData}{Color\+Data} \&a, const \hyperlink{classimage__tools_1_1ColorData}{Color\+Data} \&b)
+\item 
+bool \hyperlink{classimage__tools_1_1ColorData_a698ac263a286afe37e3b9ed0c5882c8c}{operator!=} (const \hyperlink{classimage__tools_1_1ColorData}{Color\+Data} \&a, const \hyperlink{classimage__tools_1_1ColorData}{Color\+Data} \&b)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This color data class stores color in floating point format. The Red, Green, Blue, and Alpha channels range from 0.\+0 to 1.\+0. 
+
+\subsection{Friends And Related Function Documentation}
+\mbox{\Hypertarget{classimage__tools_1_1ColorData_a698ac263a286afe37e3b9ed0c5882c8c}\label{classimage__tools_1_1ColorData_a698ac263a286afe37e3b9ed0c5882c8c}} 
+\index{image\+\_\+tools\+::\+Color\+Data@{image\+\_\+tools\+::\+Color\+Data}!operator"!=@{operator"!=}}
+\index{operator"!=@{operator"!=}!image\+\_\+tools\+::\+Color\+Data@{image\+\_\+tools\+::\+Color\+Data}}
+\subsubsection{\texorpdfstring{operator"!=}{operator!=}}
+{\footnotesize\ttfamily bool operator!= (\begin{DoxyParamCaption}\item[{const \hyperlink{classimage__tools_1_1ColorData}{Color\+Data} \&}]{a,  }\item[{const \hyperlink{classimage__tools_1_1ColorData}{Color\+Data} \&}]{b }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+Check for \char`\"{}inequality\char`\"{}, taking floating point imprecision into account \mbox{\Hypertarget{classimage__tools_1_1ColorData_a9dae9e77610393d100312c9d248f09cc}\label{classimage__tools_1_1ColorData_a9dae9e77610393d100312c9d248f09cc}} 
+\index{image\+\_\+tools\+::\+Color\+Data@{image\+\_\+tools\+::\+Color\+Data}!operator==@{operator==}}
+\index{operator==@{operator==}!image\+\_\+tools\+::\+Color\+Data@{image\+\_\+tools\+::\+Color\+Data}}
+\subsubsection{\texorpdfstring{operator==}{operator==}}
+{\footnotesize\ttfamily bool operator== (\begin{DoxyParamCaption}\item[{const \hyperlink{classimage__tools_1_1ColorData}{Color\+Data} \&}]{a,  }\item[{const \hyperlink{classimage__tools_1_1ColorData}{Color\+Data} \&}]{b }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+Check for \char`\"{}equality\char`\"{}, taking floating point imprecision into account 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/imagetools/color\+\_\+data.\+h\item 
+src/imagetools/color\+\_\+data.\+cc\end{DoxyCompactItemize}

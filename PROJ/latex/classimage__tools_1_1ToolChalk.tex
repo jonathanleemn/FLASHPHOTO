@@ -1,0 +1,77 @@
+\hypertarget{classimage__tools_1_1ToolChalk}{}\section{image\+\_\+tools\+:\+:Tool\+Chalk Class Reference}
+\label{classimage__tools_1_1ToolChalk}\index{image\+\_\+tools\+::\+Tool\+Chalk@{image\+\_\+tools\+::\+Tool\+Chalk}}
+
+
+This tool simulates chalk drawing on a rough paper. The class overrides \hyperlink{classimage__tools_1_1Tool}{Tool}\textquotesingle{}s default color blending function to insert random noise as the tool is moved around.  
+
+
+
+
+{\ttfamily \#include $<$tool\+\_\+chalk.\+h$>$}
+
+
+
+Inheritance diagram for image\+\_\+tools\+:\+:Tool\+Chalk\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=199pt]{classimage__tools_1_1ToolChalk__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for image\+\_\+tools\+:\+:Tool\+Chalk\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classimage__tools_1_1ToolChalk__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classimage__tools_1_1FloatMatrix}{Float\+Matrix} $\ast$ \hyperlink{classimage__tools_1_1ToolChalk_ac5b2bd1d685a80ae4b296defcbc80580}{Create\+Mask} (float radius) override
+\item 
+\hyperlink{classimage__tools_1_1ColorData}{Color\+Data} \hyperlink{classimage__tools_1_1ToolChalk_ab2c6eda363c0fbc2283128eebbd817f5}{Combine\+Paint\+And\+Canvas\+Color} (const \hyperlink{classimage__tools_1_1ColorData}{Color\+Data} \&paint\+\_\+color, const \hyperlink{classimage__tools_1_1ColorData}{Color\+Data} \&canvas\+\_\+color, float mask\+\_\+intensity) override
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classimage__tools_1_1ToolChalk_a8304555902b7708bab24821d355b3ff0}\label{classimage__tools_1_1ToolChalk_a8304555902b7708bab24821d355b3ff0}} 
+static const std\+::string {\bfseries name} ()
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+This tool simulates chalk drawing on a rough paper. The class overrides \hyperlink{classimage__tools_1_1Tool}{Tool}\textquotesingle{}s default color blending function to insert random noise as the tool is moved around. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classimage__tools_1_1ToolChalk_ab2c6eda363c0fbc2283128eebbd817f5}\label{classimage__tools_1_1ToolChalk_ab2c6eda363c0fbc2283128eebbd817f5}} 
+\index{image\+\_\+tools\+::\+Tool\+Chalk@{image\+\_\+tools\+::\+Tool\+Chalk}!Combine\+Paint\+And\+Canvas\+Color@{Combine\+Paint\+And\+Canvas\+Color}}
+\index{Combine\+Paint\+And\+Canvas\+Color@{Combine\+Paint\+And\+Canvas\+Color}!image\+\_\+tools\+::\+Tool\+Chalk@{image\+\_\+tools\+::\+Tool\+Chalk}}
+\subsubsection{\texorpdfstring{Combine\+Paint\+And\+Canvas\+Color()}{CombinePaintAndCanvasColor()}}
+{\footnotesize\ttfamily \hyperlink{classimage__tools_1_1ColorData}{Color\+Data} image\+\_\+tools\+::\+Tool\+Chalk\+::\+Combine\+Paint\+And\+Canvas\+Color (\begin{DoxyParamCaption}\item[{const \hyperlink{classimage__tools_1_1ColorData}{Color\+Data} \&}]{paint\+\_\+color,  }\item[{const \hyperlink{classimage__tools_1_1ColorData}{Color\+Data} \&}]{canvas\+\_\+color,  }\item[{float}]{mask\+\_\+intensity }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+This function combines (i.\+e., blends) a paint\+\_\+color with an underlying canvas\+\_\+color given a mask\+\_\+intensity. The default algorithm uses a standard blending function\+: paint\+\_\+color $\ast$ mask\+\_\+intensity + canvas\+\_\+color $\ast$ (1.\+0 -\/ mask\+\_\+intensity) Some tools require a custom blend. Thus, this function provides a hook for subclasses to override the default blending function. 
+
+Reimplemented from \hyperlink{classimage__tools_1_1Tool_a1f4f417dd13da9ff60481e3e1ff30b69}{image\+\_\+tools\+::\+Tool}.
+
+\mbox{\Hypertarget{classimage__tools_1_1ToolChalk_ac5b2bd1d685a80ae4b296defcbc80580}\label{classimage__tools_1_1ToolChalk_ac5b2bd1d685a80ae4b296defcbc80580}} 
+\index{image\+\_\+tools\+::\+Tool\+Chalk@{image\+\_\+tools\+::\+Tool\+Chalk}!Create\+Mask@{Create\+Mask}}
+\index{Create\+Mask@{Create\+Mask}!image\+\_\+tools\+::\+Tool\+Chalk@{image\+\_\+tools\+::\+Tool\+Chalk}}
+\subsubsection{\texorpdfstring{Create\+Mask()}{CreateMask()}}
+{\footnotesize\ttfamily \hyperlink{classimage__tools_1_1FloatMatrix}{Float\+Matrix} $\ast$ image\+\_\+tools\+::\+Tool\+Chalk\+::\+Create\+Mask (\begin{DoxyParamCaption}\item[{float}]{radius }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Subclasses must fill in this factory method to define the mask for the specific tool they implement. 
+
+Implements \hyperlink{classimage__tools_1_1Tool_a7d58325846dbc0467e52221daa1310a7}{image\+\_\+tools\+::\+Tool}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/imagetools/tool\+\_\+chalk.\+h\item 
+src/imagetools/tool\+\_\+chalk.\+cc\end{DoxyCompactItemize}

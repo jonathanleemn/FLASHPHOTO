@@ -1,0 +1,85 @@
+\hypertarget{classimage__tools_1_1ConvolutionFilter}{}\section{image\+\_\+tools\+:\+:Convolution\+Filter Class Reference}
+\label{classimage__tools_1_1ConvolutionFilter}\index{image\+\_\+tools\+::\+Convolution\+Filter@{image\+\_\+tools\+::\+Convolution\+Filter}}
+
+
+Inherits from the \hyperlink{classimage__tools_1_1Filter}{Filter} class to implement the following convolution filters\+: Blur, Edge Detect, Motion Blur, and Sharpen.  
+
+
+
+
+{\ttfamily \#include $<$convolution\+\_\+filter.\+h$>$}
+
+
+
+Inheritance diagram for image\+\_\+tools\+:\+:Convolution\+Filter\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classimage__tools_1_1ConvolutionFilter__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for image\+\_\+tools\+:\+:Convolution\+Filter\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=320pt]{classimage__tools_1_1ConvolutionFilter__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classimage__tools_1_1ConvolutionFilter_aac988aaa5e27213ea874d9bd3eb1dbdb}\label{classimage__tools_1_1ConvolutionFilter_aac988aaa5e27213ea874d9bd3eb1dbdb}} 
+virtual \hyperlink{classimage__tools_1_1FloatMatrix}{Float\+Matrix} $\ast$ \hyperlink{classimage__tools_1_1ConvolutionFilter_aac988aaa5e27213ea874d9bd3eb1dbdb}{Create\+Kernel} ()
+\begin{DoxyCompactList}\small\item\em Will be overriden by the convolution filters. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classimage__tools_1_1ConvolutionFilter_a49be1e3b2affd935378eb12d4f240048}\label{classimage__tools_1_1ConvolutionFilter_a49be1e3b2affd935378eb12d4f240048}} 
+void \hyperlink{classimage__tools_1_1ConvolutionFilter_a49be1e3b2affd935378eb12d4f240048}{Setup\+Filter} () override
+\begin{DoxyCompactList}\small\item\em Creates a default kernel. \end{DoxyCompactList}\item 
+\hyperlink{classimage__tools_1_1ColorData}{Color\+Data} \hyperlink{classimage__tools_1_1ConvolutionFilter_a2d35a2e2a2d1303d0a6824b16406d97b}{Calculate\+Filtered\+Pixel} (\hyperlink{classimage__tools_1_1PixelBuffer}{Pixel\+Buffer} $\ast$buffer, int x, int y) override
+\item 
+\mbox{\Hypertarget{classimage__tools_1_1ConvolutionFilter_a67668b9a965491b1184ce645ac3250ed}\label{classimage__tools_1_1ConvolutionFilter_a67668b9a965491b1184ce645ac3250ed}} 
+void \hyperlink{classimage__tools_1_1ConvolutionFilter_a67668b9a965491b1184ce645ac3250ed}{Cleanup\+Filter} () override
+\begin{DoxyCompactList}\small\item\em Deletes pointer value. \end{DoxyCompactList}\item 
+bool \hyperlink{classimage__tools_1_1ConvolutionFilter_aef03779d74d96173880d93d06c7bd6b6}{can\+\_\+copy\+\_\+in\+\_\+place} () override
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classimage__tools_1_1ConvolutionFilter_a4ef900e0e03585707fce8b71afd40c5d}\label{classimage__tools_1_1ConvolutionFilter_a4ef900e0e03585707fce8b71afd40c5d}} 
+\hyperlink{classimage__tools_1_1FloatMatrix}{Float\+Matrix} $\ast$ {\bfseries kernel\+\_\+}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Inherits from the \hyperlink{classimage__tools_1_1Filter}{Filter} class to implement the following convolution filters\+: Blur, Edge Detect, Motion Blur, and Sharpen. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classimage__tools_1_1ConvolutionFilter_a2d35a2e2a2d1303d0a6824b16406d97b}\label{classimage__tools_1_1ConvolutionFilter_a2d35a2e2a2d1303d0a6824b16406d97b}} 
+\index{image\+\_\+tools\+::\+Convolution\+Filter@{image\+\_\+tools\+::\+Convolution\+Filter}!Calculate\+Filtered\+Pixel@{Calculate\+Filtered\+Pixel}}
+\index{Calculate\+Filtered\+Pixel@{Calculate\+Filtered\+Pixel}!image\+\_\+tools\+::\+Convolution\+Filter@{image\+\_\+tools\+::\+Convolution\+Filter}}
+\subsubsection{\texorpdfstring{Calculate\+Filtered\+Pixel()}{CalculateFilteredPixel()}}
+{\footnotesize\ttfamily \hyperlink{classimage__tools_1_1ColorData}{Color\+Data} image\+\_\+tools\+::\+Convolution\+Filter\+::\+Calculate\+Filtered\+Pixel (\begin{DoxyParamCaption}\item[{\hyperlink{classimage__tools_1_1PixelBuffer}{Pixel\+Buffer} $\ast$}]{buffer,  }\item[{int}]{x,  }\item[{int}]{y }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Repurposed code to calculate each filtered pixel. Source\+: \href{https://lodev.org/cgtutor/filtering.html}{\tt https\+://lodev.\+org/cgtutor/filtering.\+html}. 
+
+Reimplemented from \hyperlink{classimage__tools_1_1Filter_a68d38fa12b87e20b81090cb380c0a307}{image\+\_\+tools\+::\+Filter}.
+
+\mbox{\Hypertarget{classimage__tools_1_1ConvolutionFilter_aef03779d74d96173880d93d06c7bd6b6}\label{classimage__tools_1_1ConvolutionFilter_aef03779d74d96173880d93d06c7bd6b6}} 
+\index{image\+\_\+tools\+::\+Convolution\+Filter@{image\+\_\+tools\+::\+Convolution\+Filter}!can\+\_\+copy\+\_\+in\+\_\+place@{can\+\_\+copy\+\_\+in\+\_\+place}}
+\index{can\+\_\+copy\+\_\+in\+\_\+place@{can\+\_\+copy\+\_\+in\+\_\+place}!image\+\_\+tools\+::\+Convolution\+Filter@{image\+\_\+tools\+::\+Convolution\+Filter}}
+\subsubsection{\texorpdfstring{can\+\_\+copy\+\_\+in\+\_\+place()}{can\_copy\_in\_place()}}
+{\footnotesize\ttfamily bool image\+\_\+tools\+::\+Convolution\+Filter\+::can\+\_\+copy\+\_\+in\+\_\+place (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Convolution Filters require a copy buffer since they cannot be copied in place. 
+
+Reimplemented from \hyperlink{classimage__tools_1_1Filter_abb21c6ce1f09a4ce4fbd38255c44d281}{image\+\_\+tools\+::\+Filter}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/imagetools/convolution\+\_\+filter.\+h\item 
+src/imagetools/convolution\+\_\+filter.\+cc\end{DoxyCompactItemize}

@@ -1,0 +1,77 @@
+\hypertarget{classimage__tools_1_1ToolStamp}{}\section{image\+\_\+tools\+:\+:Tool\+Stamp Class Reference}
+\label{classimage__tools_1_1ToolStamp}\index{image\+\_\+tools\+::\+Tool\+Stamp@{image\+\_\+tools\+::\+Tool\+Stamp}}
+
+
+Stamps a single X marks the spot.  
+
+
+
+
+{\ttfamily \#include $<$tool\+\_\+stamp.\+h$>$}
+
+
+
+Inheritance diagram for image\+\_\+tools\+:\+:Tool\+Stamp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=202pt]{classimage__tools_1_1ToolStamp__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for image\+\_\+tools\+:\+:Tool\+Stamp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classimage__tools_1_1ToolStamp__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classimage__tools_1_1ToolStamp_a098a342f03717e2f909cda9515c85814}{Add\+To\+Stroke} (int x, int y) override
+\item 
+\hyperlink{classimage__tools_1_1FloatMatrix}{Float\+Matrix} $\ast$ \hyperlink{classimage__tools_1_1ToolStamp_a1331846ac4bcfc7aa307cf966658d056}{Create\+Mask} (float radius) override
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classimage__tools_1_1ToolStamp_a2c47a895c86e2aed7b869c66529aab6d}\label{classimage__tools_1_1ToolStamp_a2c47a895c86e2aed7b869c66529aab6d}} 
+static const std\+::string {\bfseries name} ()
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Stamps a single X marks the spot. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classimage__tools_1_1ToolStamp_a098a342f03717e2f909cda9515c85814}\label{classimage__tools_1_1ToolStamp_a098a342f03717e2f909cda9515c85814}} 
+\index{image\+\_\+tools\+::\+Tool\+Stamp@{image\+\_\+tools\+::\+Tool\+Stamp}!Add\+To\+Stroke@{Add\+To\+Stroke}}
+\index{Add\+To\+Stroke@{Add\+To\+Stroke}!image\+\_\+tools\+::\+Tool\+Stamp@{image\+\_\+tools\+::\+Tool\+Stamp}}
+\subsubsection{\texorpdfstring{Add\+To\+Stroke()}{AddToStroke()}}
+{\footnotesize\ttfamily void image\+\_\+tools\+::\+Tool\+Stamp\+::\+Add\+To\+Stroke (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{y }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+The stamp tool overrides Add\+To\+Stroke to make it do nothing. This way, each time the stamp tool is used it produces just a single mark on the canvas at the first location where it is applied. 
+
+Reimplemented from \hyperlink{classimage__tools_1_1Tool_a84d87d7baec8a961be236d4b30636fc0}{image\+\_\+tools\+::\+Tool}.
+
+\mbox{\Hypertarget{classimage__tools_1_1ToolStamp_a1331846ac4bcfc7aa307cf966658d056}\label{classimage__tools_1_1ToolStamp_a1331846ac4bcfc7aa307cf966658d056}} 
+\index{image\+\_\+tools\+::\+Tool\+Stamp@{image\+\_\+tools\+::\+Tool\+Stamp}!Create\+Mask@{Create\+Mask}}
+\index{Create\+Mask@{Create\+Mask}!image\+\_\+tools\+::\+Tool\+Stamp@{image\+\_\+tools\+::\+Tool\+Stamp}}
+\subsubsection{\texorpdfstring{Create\+Mask()}{CreateMask()}}
+{\footnotesize\ttfamily \hyperlink{classimage__tools_1_1FloatMatrix}{Float\+Matrix} $\ast$ image\+\_\+tools\+::\+Tool\+Stamp\+::\+Create\+Mask (\begin{DoxyParamCaption}\item[{float}]{radius }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Subclasses must fill in this factory method to define the mask for the specific tool they implement. 
+
+Implements \hyperlink{classimage__tools_1_1Tool_a7d58325846dbc0467e52221daa1310a7}{image\+\_\+tools\+::\+Tool}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/imagetools/tool\+\_\+stamp.\+h\item 
+src/imagetools/tool\+\_\+stamp.\+cc\end{DoxyCompactItemize}

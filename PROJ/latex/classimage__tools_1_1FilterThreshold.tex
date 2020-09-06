@@ -1,0 +1,64 @@
+\hypertarget{classimage__tools_1_1FilterThreshold}{}\section{image\+\_\+tools\+:\+:Filter\+Threshold Class Reference}
+\label{classimage__tools_1_1FilterThreshold}\index{image\+\_\+tools\+::\+Filter\+Threshold@{image\+\_\+tools\+::\+Filter\+Threshold}}
+
+
+Implements a filter by rounding an image\textquotesingle{}s R\+GB value up to 1.\+0 (white) if it\textquotesingle{}s pixel value is greater than the threshold input or down to 0.\+0 (black) if it\textquotesingle{}s pixel value is lower than the threshold input.  
+
+
+
+
+{\ttfamily \#include $<$filter\+\_\+threshold.\+h$>$}
+
+
+
+Inheritance diagram for image\+\_\+tools\+:\+:Filter\+Threshold\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=220pt]{classimage__tools_1_1FilterThreshold__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for image\+\_\+tools\+:\+:Filter\+Threshold\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=220pt]{classimage__tools_1_1FilterThreshold__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classimage__tools_1_1FilterThreshold_a10675d611d33cdead5ddecfaa3b8494c}\label{classimage__tools_1_1FilterThreshold_a10675d611d33cdead5ddecfaa3b8494c}} 
+\hyperlink{classimage__tools_1_1FilterThreshold_a10675d611d33cdead5ddecfaa3b8494c}{Filter\+Threshold} ()
+\begin{DoxyCompactList}\small\item\em Defaults to threshold\+\_\+val=0.\+5. \end{DoxyCompactList}\item 
+\hyperlink{classimage__tools_1_1ColorData}{Color\+Data} \hyperlink{classimage__tools_1_1FilterThreshold_a905065fd47d7228b11354795e487b2c6}{Calculate\+Filtered\+Pixel} (\hyperlink{classimage__tools_1_1PixelBuffer}{Pixel\+Buffer} $\ast$buffer, int x, int y) override
+\item 
+\mbox{\Hypertarget{classimage__tools_1_1FilterThreshold_a1c939ef99b6370970ce6ca0227d66ad6}\label{classimage__tools_1_1FilterThreshold_a1c939ef99b6370970ce6ca0227d66ad6}} 
+void {\bfseries Set\+Value} (float threshold\+\_\+val)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Implements a filter by rounding an image\textquotesingle{}s R\+GB value up to 1.\+0 (white) if it\textquotesingle{}s pixel value is greater than the threshold input or down to 0.\+0 (black) if it\textquotesingle{}s pixel value is lower than the threshold input. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classimage__tools_1_1FilterThreshold_a905065fd47d7228b11354795e487b2c6}\label{classimage__tools_1_1FilterThreshold_a905065fd47d7228b11354795e487b2c6}} 
+\index{image\+\_\+tools\+::\+Filter\+Threshold@{image\+\_\+tools\+::\+Filter\+Threshold}!Calculate\+Filtered\+Pixel@{Calculate\+Filtered\+Pixel}}
+\index{Calculate\+Filtered\+Pixel@{Calculate\+Filtered\+Pixel}!image\+\_\+tools\+::\+Filter\+Threshold@{image\+\_\+tools\+::\+Filter\+Threshold}}
+\subsubsection{\texorpdfstring{Calculate\+Filtered\+Pixel()}{CalculateFilteredPixel()}}
+{\footnotesize\ttfamily \hyperlink{classimage__tools_1_1ColorData}{Color\+Data} image\+\_\+tools\+::\+Filter\+Threshold\+::\+Calculate\+Filtered\+Pixel (\begin{DoxyParamCaption}\item[{\hyperlink{classimage__tools_1_1PixelBuffer}{Pixel\+Buffer} $\ast$}]{buffer,  }\item[{int}]{x,  }\item[{int}]{y }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Applies a filter by looping through each pixel in an image and modifying that pixel. 
+
+Reimplemented from \hyperlink{classimage__tools_1_1Filter_a68d38fa12b87e20b81090cb380c0a307}{image\+\_\+tools\+::\+Filter}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/imagetools/filter\+\_\+threshold.\+h\item 
+src/imagetools/filter\+\_\+threshold.\+cc\end{DoxyCompactItemize}

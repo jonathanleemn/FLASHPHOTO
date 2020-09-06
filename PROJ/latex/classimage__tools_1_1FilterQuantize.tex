@@ -1,0 +1,64 @@
+\hypertarget{classimage__tools_1_1FilterQuantize}{}\section{image\+\_\+tools\+:\+:Filter\+Quantize Class Reference}
+\label{classimage__tools_1_1FilterQuantize}\index{image\+\_\+tools\+::\+Filter\+Quantize@{image\+\_\+tools\+::\+Filter\+Quantize}}
+
+
+Implements a filter by reducing the number of colors in the image via a binning method. Each color channel is modified by placing it into the closest bin.  
+
+
+
+
+{\ttfamily \#include $<$filter\+\_\+quantize.\+h$>$}
+
+
+
+Inheritance diagram for image\+\_\+tools\+:\+:Filter\+Quantize\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=216pt]{classimage__tools_1_1FilterQuantize__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for image\+\_\+tools\+:\+:Filter\+Quantize\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=216pt]{classimage__tools_1_1FilterQuantize__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classimage__tools_1_1FilterQuantize_aeba7a9d7a4260f74fdff4a550181a8e1}\label{classimage__tools_1_1FilterQuantize_aeba7a9d7a4260f74fdff4a550181a8e1}} 
+\hyperlink{classimage__tools_1_1FilterQuantize_aeba7a9d7a4260f74fdff4a550181a8e1}{Filter\+Quantize} ()
+\begin{DoxyCompactList}\small\item\em Defaults to bin\+\_\+val=1. \end{DoxyCompactList}\item 
+\hyperlink{classimage__tools_1_1ColorData}{Color\+Data} \hyperlink{classimage__tools_1_1FilterQuantize_a312afa1aa4af5c58b7ec6d5faad0a176}{Calculate\+Filtered\+Pixel} (\hyperlink{classimage__tools_1_1PixelBuffer}{Pixel\+Buffer} $\ast$buffer, int x, int y) override
+\item 
+\mbox{\Hypertarget{classimage__tools_1_1FilterQuantize_a8be8db0926f5701615320882f60f9d45}\label{classimage__tools_1_1FilterQuantize_a8be8db0926f5701615320882f60f9d45}} 
+void {\bfseries Set\+Value} (int bin\+\_\+val)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Implements a filter by reducing the number of colors in the image via a binning method. Each color channel is modified by placing it into the closest bin. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classimage__tools_1_1FilterQuantize_a312afa1aa4af5c58b7ec6d5faad0a176}\label{classimage__tools_1_1FilterQuantize_a312afa1aa4af5c58b7ec6d5faad0a176}} 
+\index{image\+\_\+tools\+::\+Filter\+Quantize@{image\+\_\+tools\+::\+Filter\+Quantize}!Calculate\+Filtered\+Pixel@{Calculate\+Filtered\+Pixel}}
+\index{Calculate\+Filtered\+Pixel@{Calculate\+Filtered\+Pixel}!image\+\_\+tools\+::\+Filter\+Quantize@{image\+\_\+tools\+::\+Filter\+Quantize}}
+\subsubsection{\texorpdfstring{Calculate\+Filtered\+Pixel()}{CalculateFilteredPixel()}}
+{\footnotesize\ttfamily \hyperlink{classimage__tools_1_1ColorData}{Color\+Data} image\+\_\+tools\+::\+Filter\+Quantize\+::\+Calculate\+Filtered\+Pixel (\begin{DoxyParamCaption}\item[{\hyperlink{classimage__tools_1_1PixelBuffer}{Pixel\+Buffer} $\ast$}]{buffer,  }\item[{int}]{x,  }\item[{int}]{y }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Applies a filter by looping through each pixel in an image and modifying that pixel. 
+
+Reimplemented from \hyperlink{classimage__tools_1_1Filter_a68d38fa12b87e20b81090cb380c0a307}{image\+\_\+tools\+::\+Filter}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/imagetools/filter\+\_\+quantize.\+h\item 
+src/imagetools/filter\+\_\+quantize.\+cc\end{DoxyCompactItemize}

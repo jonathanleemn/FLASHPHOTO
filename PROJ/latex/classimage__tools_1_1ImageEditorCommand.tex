@@ -1,0 +1,50 @@
+\hypertarget{classimage__tools_1_1ImageEditorCommand}{}\section{image\+\_\+tools\+:\+:Image\+Editor\+Command Class Reference}
+\label{classimage__tools_1_1ImageEditorCommand}\index{image\+\_\+tools\+::\+Image\+Editor\+Command@{image\+\_\+tools\+::\+Image\+Editor\+Command}}
+
+
+{\ttfamily \#include $<$image\+\_\+editor\+\_\+commands.\+h$>$}
+
+
+
+Inheritance diagram for image\+\_\+tools\+:\+:Image\+Editor\+Command\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{classimage__tools_1_1ImageEditorCommand__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for image\+\_\+tools\+:\+:Image\+Editor\+Command\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=208pt]{classimage__tools_1_1ImageEditorCommand__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classimage__tools_1_1ImageEditorCommand_ac2843ecf9bcbae0dcb88b0eb081612e6}\label{classimage__tools_1_1ImageEditorCommand_ac2843ecf9bcbae0dcb88b0eb081612e6}} 
+{\bfseries Image\+Editor\+Command} (\hyperlink{classimage__tools_1_1ImageEditor}{Image\+Editor} $\ast$image\+\_\+editor)
+\item 
+\mbox{\Hypertarget{classimage__tools_1_1ImageEditorCommand_aed20aa0ff8ae87c92c35ec2d445ffe96}\label{classimage__tools_1_1ImageEditorCommand_aed20aa0ff8ae87c92c35ec2d445ffe96}} 
+virtual void {\bfseries Execute} ()=0
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classimage__tools_1_1ImageEditorCommand_a2b973bf000632c7767a29ca979dd3ef8}\label{classimage__tools_1_1ImageEditorCommand_a2b973bf000632c7767a29ca979dd3ef8}} 
+\hyperlink{classimage__tools_1_1ImageEditor}{Image\+Editor} $\ast$ {\bfseries image\+\_\+editor\+\_\+}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Base class for all image editor commands. Each command knows how to execute itself, including sending and required parameters to the image editor. This structure follows the Command Design Pattern. The command pattern is also often used to implement undo. However, we don\textquotesingle{}t do that here because all of the commands get \char`\"{}undone\char`\"{} in exactly the same way -- we simply restore the pixel buffer that was in place before the command was executed. So, it\textquotesingle{}s quite clean to implement the undo feature directly within the \hyperlink{classimage__tools_1_1ImageEditor}{Image\+Editor} class, which simply maintains a list of previous pixel buffers. The main reason for implementing these command wrappers around the image editor functionality is to be able to easily create a list of commands to run later while parsing command line arguments. If instead we just processed each command as it appears on the command line (e.\+g., blur then threshold then ...) the process can potentially run for quite a long time before discovering that there is an error in the syntax at the end of the command line. So, it is nice to be able to parse the whole command line first building up a list of commands to send to the image editor and then, if the whole command line looks good, run the whole list of commands. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/mia/image\+\_\+editor\+\_\+commands.\+h\item 
+src/mia/image\+\_\+editor\+\_\+commands.\+cc\end{DoxyCompactItemize}
